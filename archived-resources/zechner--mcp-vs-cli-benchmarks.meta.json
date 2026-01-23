@@ -1,0 +1,33 @@
+{
+  "url": "https://mariozechner.at/posts/2025-08-15-mcp-vs-cli/",
+  "title": "MCP vs CLI: Benchmarking Tools for Coding Agents",
+  "author": "Mario Zechner",
+  "published_date": "2025-08-15",
+  "archived_date": "2026-01-23",
+  "archived_by": "Claude Code Agent",
+  "extraction_method": "WebFetch",
+  "content_type": "benchmark_study",
+  "topics": [
+    "MCP benchmarks",
+    "CLI comparison",
+    "token efficiency",
+    "cost analysis",
+    "Claude Code"
+  ],
+  "key_metrics": {
+    "cli_tmux_cost": "$0.3729",
+    "mcp_terminalcp_cost": "$0.4804",
+    "total_evaluations": 120,
+    "success_rate": "100%"
+  },
+  "tools_compared": [
+    "tmux",
+    "terminalcp CLI",
+    "terminalcp MCP",
+    "screen"
+  ],
+  "key_quotes": [
+    "Many MCPs flood the context window with unnecessary output",
+    "CLI tools leverage model pre-training knowledge"
+  ]
+}

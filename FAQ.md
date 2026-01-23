@@ -1,5 +1,9 @@
 # FAQ: MCP Alternatives & Advanced Patterns
 
+*See [Core Thesis](THESIS.md) for concise summary.*
+
+---
+
 ## "Isn't MCP's problem just token cost?"
 
 No. The problem is **threefold**:

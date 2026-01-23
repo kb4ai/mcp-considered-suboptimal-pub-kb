@@ -12,40 +12,40 @@ These sources are referenced in `mcp-critique-sources.md` but not yet archived l
 
 ### Armin Ronacher (Flask/Rye/uv creator)
 
-- [ ] **Archive:** https://lucumr.pocoo.org/2025/12/13/skills-vs-mcp/
+- [x] **Archive:** https://lucumr.pocoo.org/2025/12/13/skills-vs-mcp/
   - Title: "Skills vs Dynamic MCP Loadouts"
   - Key quote: "45s/7 calls initial → 5s/1 call scripted"
   - Save as: `archived-resources/ronacher--skills-vs-dynamic-mcp-loadouts.md`
 
-- [ ] **Archive:** https://lucumr.pocoo.org/2025/8/18/code-mcps/
+- [x] **Archive:** https://lucumr.pocoo.org/2025/8/18/code-mcps/
   - Title: "Your MCP Doesn't Need 30 Tools"
   - Key quote: "Token cost: Well-designed MCPs still consume ~8k tokens"
   - Save as: `archived-resources/ronacher--mcp-doesnt-need-30-tools.md`
 
 ### Mario Zechner (Benchmarking)
 
-- [ ] **Archive:** https://mariozechner.at/posts/2025-08-15-mcp-vs-cli/
+- [x] **Archive:** https://mariozechner.at/posts/2025-08-15-mcp-vs-cli/
   - Title: "MCP vs CLI: Benchmarking Tools"
   - Key data: CLI $0.37 vs MCP $0.48
   - Save as: `archived-resources/zechner--mcp-vs-cli-benchmarks.md`
 
 ### LiquidMetal AI
 
-- [ ] **Archive:** https://liquidmetal.ai/casesAndBlogs/mcp-api-wrapper-antipattern/
+- [x] **Archive:** https://liquidmetal.ai/casesAndBlogs/mcp-api-wrapper-antipattern/
   - Title: "If Your MCP is an API Wrapper, You're Doing It Wrong"
   - Key concept: API wrapper antipattern
   - Save as: `archived-resources/liquidmetal--mcp-api-wrapper-antipattern.md`
 
 ### Shrivu Shankar
 
-- [ ] **Archive:** https://blog.sshh.io/p/everything-wrong-with-mcp
+- [x] **Archive:** https://blog.sshh.io/p/everything-wrong-with-mcp
   - Title: "Everything Wrong with MCP"
   - Key points: No standard auth, rug-pull attacks, performance degradation
   - Save as: `archived-resources/shankar--everything-wrong-with-mcp.md`
 
 ### ainoya.dev
 
-- [ ] **Archive:** https://ainoya.dev/posts/why-cli-instead-of-mcp/
+- [x] **Archive:** https://ainoya.dev/posts/why-cli-instead-of-mcp/
   - Title: "Why CLI instead of MCP"
   - Key contrast: 50k tokens raw JSON vs 2k filtered
   - Save as: `archived-resources/ainoya--why-cli-instead-of-mcp.md`
@@ -169,12 +169,12 @@ Each archived source should include:
 
 | Category | Total | Done | Remaining |
 |----------|-------|------|-----------|
-| New Critic Sources | 6 | 0 | 6 |
+| New Critic Sources | 6 | 6 | 0 |
 | Further Reading | 3 | 0 | 3 |
 | Quality Research | 4 | 0 | 4 |
 | Security Research | 3 | 0 | 3 |
 | Aggregator Docs | 4 | 0 | 4 |
-| **Total** | **20** | **0** | **20** |
+| **Total** | **20** | **6** | **14** |
 
 ---
 

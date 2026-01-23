@@ -1,0 +1,27 @@
+{
+  "url": "https://liquidmetal.ai/casesAndBlogs/mcp-api-wrapper-antipattern/",
+  "title": "If Your MCP is an API Wrapper, You're Doing It Wrong",
+  "author": "Fokke Dekker",
+  "published_date": "2025-08-13",
+  "archived_date": "2026-01-23",
+  "archived_by": "Claude Code Agent",
+  "extraction_method": "WebFetch",
+  "content_type": "blog_post",
+  "topics": [
+    "MCP antipatterns",
+    "API wrapper critique",
+    "intent-based design",
+    "LLM UX",
+    "token efficiency"
+  ],
+  "antipatterns_identified": [
+    "API wrapper MCP",
+    "Multi-step workflows for single actions",
+    "Generic error messages",
+    "UUID resolution chains"
+  ],
+  "key_quotes": [
+    "Wrong User Model: LLM guesses UUID from ambiguous 'John'",
+    "4-step workflow (projects→users→search→create) for 1 action"
+  ]
+}

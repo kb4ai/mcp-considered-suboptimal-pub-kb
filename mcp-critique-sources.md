@@ -1,5 +1,7 @@
 # MCP Critique: Sources & Commentary
 
+*See [Core Thesis](THESIS.md) for concise summary.*
+
 A curated collection of industry voices questioning MCP's design decisions.
 
 ---
@@ -8,8 +10,8 @@ A curated collection of industry voices questioning MCP's design decisions.
 
 ### Armin Ronacher (Creator of Flask, Rye, uv)
 
-**Source:** [Skills vs Dynamic MCP Loadouts](https://lucumr.pocoo.org/2025/12/13/skills-vs-mcp/)
-**Source:** [Your MCP Doesn't Need 30 Tools](https://lucumr.pocoo.org/2025/8/18/code-mcps/)
+**Source:** [Skills vs Dynamic MCP Loadouts](https://lucumr.pocoo.org/2025/12/13/skills-vs-mcp/) ([archived](archived-resources/ronacher--skills-vs-dynamic-mcp-loadouts.md))
+**Source:** [Your MCP Doesn't Need 30 Tools](https://lucumr.pocoo.org/2025/8/18/code-mcps/) ([archived](archived-resources/ronacher--mcp-doesnt-need-30-tools.md))
 
 Key insights:
 
@@ -25,7 +27,7 @@ Key insights:
 
 ### Mario Zechner (Benchmarking Expert)
 
-**Source:** [MCP vs CLI: Benchmarking Tools](https://mariozechner.at/posts/2025-08-15-mcp-vs-cli/)
+**Source:** [MCP vs CLI: Benchmarking Tools](https://mariozechner.at/posts/2025-08-15-mcp-vs-cli/) ([archived](archived-resources/zechner--mcp-vs-cli-benchmarks.md))
 
 Benchmark results:
 
@@ -42,7 +44,7 @@ Benchmark results:
 
 ### LiquidMetal AI
 
-**Source:** [If Your MCP is an API Wrapper, You're Doing It Wrong](https://liquidmetal.ai/casesAndBlogs/mcp-api-wrapper-antipattern/)
+**Source:** [If Your MCP is an API Wrapper, You're Doing It Wrong](https://liquidmetal.ai/casesAndBlogs/mcp-api-wrapper-antipattern/) ([archived](archived-resources/liquidmetal--mcp-api-wrapper-antipattern.md))
 
 The API wrapper antipattern:
 
@@ -54,7 +56,7 @@ The API wrapper antipattern:
 
 ### Shrivu Shankar
 
-**Source:** [Everything Wrong with MCP](https://blog.sshh.io/p/everything-wrong-with-mcp)
+**Source:** [Everything Wrong with MCP](https://blog.sshh.io/p/everything-wrong-with-mcp) ([archived](archived-resources/shankar--everything-wrong-with-mcp.md))
 
 Security concerns:
 
@@ -68,7 +70,7 @@ Security concerns:
 
 ### ainoya.dev
 
-**Source:** [Why CLI instead of MCP](https://ainoya.dev/posts/why-cli-instead-of-mcp/)
+**Source:** [Why CLI instead of MCP](https://ainoya.dev/posts/why-cli-instead-of-mcp/) ([archived](archived-resources/ainoya--why-cli-instead-of-mcp.md))
 
 CLI philosophy:
 

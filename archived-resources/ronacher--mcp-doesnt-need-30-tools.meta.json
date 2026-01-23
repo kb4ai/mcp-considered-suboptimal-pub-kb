@@ -1,0 +1,31 @@
+{
+  "url": "https://lucumr.pocoo.org/2025/8/18/code-mcps/",
+  "title": "Your MCP Doesn't Need 30 Tools: It Needs Code",
+  "author": "Armin Ronacher",
+  "author_credentials": "Creator of Flask, Rye, uv",
+  "published_date": "2025-08-18",
+  "archived_date": "2026-01-23",
+  "archived_by": "Claude Code Agent",
+  "extraction_method": "WebFetch",
+  "content_type": "blog_post",
+  "topics": [
+    "MCP design",
+    "code execution",
+    "token efficiency",
+    "tool consolidation",
+    "agent evolution"
+  ],
+  "key_metrics": {
+    "initial_workflow_time": "45 seconds / 7 calls",
+    "optimized_workflow_time": "5 seconds / 1 call",
+    "well_designed_mcp_tokens": "~8000 tokens"
+  },
+  "key_quotes": [
+    "The command line really isn't just one tool — it's a series of tools that can be composed through a programming language: bash.",
+    "45s/7 calls initial → 5s/1 call scripted"
+  ],
+  "implementations_mentioned": [
+    "pexpect-mcp",
+    "playwrightess-mcp"
+  ]
+}

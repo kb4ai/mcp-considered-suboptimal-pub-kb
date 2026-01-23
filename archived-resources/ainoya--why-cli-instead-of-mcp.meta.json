@@ -1,0 +1,31 @@
+{
+  "url": "https://ainoya.dev/posts/why-cli-instead-of-mcp/",
+  "title": "Building Small CLI Tools for AI Agents",
+  "author": "Naoki Ainoya",
+  "published_date": "2025-12-06",
+  "archived_date": "2026-01-23",
+  "archived_by": "Claude Code Agent",
+  "extraction_method": "WebFetch",
+  "content_type": "blog_post",
+  "topics": [
+    "CLI design",
+    "MCP critique",
+    "token efficiency",
+    "Unix philosophy",
+    "AI native tools"
+  ],
+  "key_metrics": {
+    "mcp_raw_json_tokens": "~50000 tokens",
+    "cli_filtered_tokens": "~2000 tokens",
+    "token_reduction": "96%"
+  },
+  "tools_mentioned": [
+    "slack-cli",
+    "atlassian-cli",
+    "esa-cli"
+  ],
+  "key_quotes": [
+    "MCP approach: Pass all Slack data to LLM [50k tokens raw JSON]",
+    "CLI approach: Filter first [...] → [2k tokens relevant subset]"
+  ]
+}

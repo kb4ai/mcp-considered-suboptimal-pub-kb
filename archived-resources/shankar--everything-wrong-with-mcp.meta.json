@@ -1,0 +1,35 @@
+{
+  "url": "https://blog.sshh.io/p/everything-wrong-with-mcp",
+  "title": "Everything Wrong with MCP",
+  "author": "Shrivu Shankar",
+  "published_date": "2025-04-13",
+  "archived_date": "2026-01-23",
+  "archived_by": "Claude Code Agent",
+  "extraction_method": "WebFetch",
+  "content_type": "blog_post",
+  "topics": [
+    "MCP security",
+    "authentication fragmentation",
+    "prompt injection",
+    "rug-pull attacks",
+    "performance degradation",
+    "tool-use benchmarks"
+  ],
+  "security_issues": [
+    "18+ custom auth implementations",
+    "Rug-pull attacks via dynamic tool redefinition",
+    "Fourth-party injection",
+    "Data exfiltration",
+    "Prompt injection via tool definitions"
+  ],
+  "key_metrics": {
+    "auth_implementations": "18+",
+    "tau_bench_sonnet_success": "16%"
+  },
+  "key_quotes": [
+    "No standard auth (18+ custom implementations)",
+    "Dynamic tool redefinition (rug-pull attacks post-confirmation)",
+    "Performance ∝ 1/context_size (more tools = worse accuracy)",
+    "Reliability often negatively correlates with instructional context"
+  ]
+}
