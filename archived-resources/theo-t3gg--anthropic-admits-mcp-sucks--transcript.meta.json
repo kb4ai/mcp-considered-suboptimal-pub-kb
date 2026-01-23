@@ -1,0 +1,43 @@
+{
+  "source": {
+    "url": "https://www.youtube.com/watch?v=1piFEKA9XL0",
+    "channel": "Theo - t3.gg",
+    "channel_url": "https://www.youtube.com/@t3dotgg",
+    "type": "youtube_video"
+  },
+  "title": "Anthropic admits they were wrong about MCP",
+  "published": "2025-11",
+  "archived": "2026-01-23",
+  "transcript_type": "auto-generated",
+  "topics": [
+    "MCP critique",
+    "context window bloat",
+    "token efficiency",
+    "code execution",
+    "AI tooling",
+    "developer experience"
+  ],
+  "referenced_sources": [
+    {
+      "title": "Code execution with MCP: building more efficient AI agents",
+      "url": "https://www.anthropic.com/engineering/code-execution-with-mcp",
+      "publisher": "Anthropic"
+    },
+    {
+      "title": "Cloudflare Code Mode",
+      "description": "Cloudflare's approach to MCP that lets agents write code instead"
+    }
+  ],
+  "key_statistics": {
+    "token_reduction": "98.7%",
+    "tokens_before": 150000,
+    "tokens_after": 2000
+  },
+  "key_arguments": [
+    "Models get dumber with more tools, smarter with fewer good tools",
+    "MCP lacks OAuth support",
+    "MCP lacks progressive discovery",
+    "Code execution is 98.7% more efficient than MCP tool calling",
+    "Software engineering patterns already solve these problems"
+  ]
+}
