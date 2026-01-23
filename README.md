@@ -94,6 +94,7 @@ Instead of bloating context with MCP definitions, give LLMs:
 ├── FAQ.md                             ← Advanced questions & patterns
 ├── mcp-critique-sources.md            ← Industry voices & references
 ├── cli-sdk-over-context-bloat.md      ← Detailed analysis & patterns
+├── TODO.md                            ← Pending archival & research tasks
 └── archived-resources/                ← Source material with timestamps
     ├── anthropic--code-execution-with-mcp.md
     ├── chrisloy--rise-of-industrial-software.md
