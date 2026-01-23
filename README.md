@@ -91,6 +91,8 @@ Instead of bloating context with MCP definitions, give LLMs:
 ```
 .
 ├── README.md                          ← You are here
+├── FAQ.md                             ← Advanced questions & patterns
+├── mcp-critique-sources.md            ← Industry voices & references
 ├── cli-sdk-over-context-bloat.md      ← Detailed analysis & patterns
 └── archived-resources/                ← Source material with timestamps
     ├── anthropic--code-execution-with-mcp.md
@@ -105,6 +107,13 @@ Instead of bloating context with MCP definitions, give LLMs:
 ```
 
 All archives include `.url` (source pointer) and `.meta.json` (structured metadata) companions.
+
+---
+
+## Further Reading
+
+* **[FAQ: MCP Alternatives & Advanced Patterns](FAQ.md)** — Aggregators, sandboxing, self-optimization
+* **[MCP Critique: Sources & Commentary](mcp-critique-sources.md)** — Comprehensive collection of industry voices
 
 ---
 
