@@ -1,0 +1,87 @@
+{
+  "title": "We've Been Using MCP Wrong: How Anthropic Reduced AI Agent Costs by 98.7%",
+  "url": "https://medium.com/@meshuggah22/weve-been-using-mcp-wrong-how-anthropic-reduced-ai-agent-costs-by-98-7-7c102fc22589",
+  "author": {
+    "name": "Pawel",
+    "username": "@meshuggah22",
+    "profile": "https://medium.com/@meshuggah22",
+    "bio": "Gen AI director with a focus on AI & Data Strategy, FinOps, MLOps & LLM/LMMOps",
+    "followers": 301,
+    "following": 3
+  },
+  "publication_date": "2025-11-06T22:52:24Z",
+  "archive_date": "2026-01-23T00:28:58Z",
+  "reading_time": "5 min read",
+  "engagement": {
+    "claps": 325,
+    "responses": 8
+  },
+  "status": "member-only",
+  "access": "paywalled",
+  "content_completeness": "partial_preview_only",
+  "platform": "Medium",
+  "article_type": "technical_analysis",
+  "categories": [
+    "AI/ML Engineering",
+    "LLMOps",
+    "Cost Optimization",
+    "Model Context Protocol",
+    "Token Efficiency"
+  ],
+  "key_statistics": {
+    "token_reduction": "98.7%",
+    "traditional_tokens": 150000,
+    "optimized_tokens": 2000
+  },
+  "extraction_method": "jina.ai_reader_api",
+  "extraction_limitations": [
+    "Paywalled content - only preview available",
+    "Full technical details not accessible",
+    "Code examples incomplete",
+    "Images not archived"
+  ],
+  "related_articles_by_author": [
+    {
+      "title": "Google's A2UI Protocol Just Changed How AI Agents Build User Interfaces",
+      "date": "2025-12-28",
+      "engagement": {
+        "claps": 67
+      }
+    },
+    {
+      "title": "FunctionGemma: I Fine-Tuned Google's 270M Edge Model and Tested It on My S23",
+      "date": "2025-12-19",
+      "engagement": {
+        "claps": 88,
+        "responses": 2
+      }
+    },
+    {
+      "title": "HuggingFace Skills: Fine-Tune Any Open-Source LLM with One Line of English",
+      "date": "2025-12-07",
+      "engagement": {
+        "claps": 212
+      }
+    },
+    {
+      "title": "Hands-On with Bloom: Anthropic's Open-Source Framework for Automated AI Behavioral Evaluation",
+      "date": "2025-12-22",
+      "engagement": {
+        "claps": 15
+      }
+    }
+  ],
+  "key_themes": [
+    "MCP inefficiency in traditional implementations",
+    "Token usage optimization",
+    "Code generation vs direct tool calling",
+    "Production scaling challenges",
+    "Cost reduction strategies",
+    "Context window management"
+  ],
+  "technical_approach": "code_generation_instead_of_direct_tool_calls",
+  "organizations_mentioned": [
+    "Anthropic",
+    "Cloudflare"
+  ]
+}
