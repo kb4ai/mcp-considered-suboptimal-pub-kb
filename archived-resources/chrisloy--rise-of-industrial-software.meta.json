@@ -1,0 +1,54 @@
+{
+  "title": "The Rise of Industrial Software",
+  "author": "Chris Loy",
+  "publication_date": "2025-12-30",
+  "published_time": "Tue, 06 Jan 2026 12:01:02 GMT",
+  "source_url": "https://chrisloy.dev/post/2025/12/30/the-rise-of-industrial-software",
+  "retrieved_date": "2026-01-23",
+  "retrieval_method": "jina.ai reader API",
+  "series": "AI coding and software",
+  "reading_time": "8 minutes",
+  "archive_format": "markdown",
+  "content_type": "blog post",
+  "topics": [
+    "industrial software",
+    "AI coding",
+    "software development",
+    "disposable software",
+    "technical debt",
+    "Jevons paradox",
+    "innovation",
+    "industrialization",
+    "software craftsmanship",
+    "automation"
+  ],
+  "key_concepts": [
+    "Industrial Software Revolution - AI-driven automation transforming software from craft to manufacture",
+    "Disposable Software - Low-cost, low-value outputs with no expectation of long-term maintenance",
+    "Jevons Paradox - How efficiency improvements paradoxically increase overall consumption",
+    "Innovation vs Industrialization - Dual forces driving software progress",
+    "Technical Debt as Pollution - The environmental cost of mass automation"
+  ],
+  "related_articles": [
+    {
+      "title": "The AI Coding Trap",
+      "url": "https://chrisloy.dev/post/2025/09/28/the-ai-coding-trap",
+      "description": "About shortcuts to incomplete solutions"
+    },
+    {
+      "title": "Context Engineering",
+      "url": "https://chrisloy.dev/post/2025/08/03/context-engineering",
+      "description": "On large language models"
+    }
+  ],
+  "images": [
+    "https://chrisloy.dev/images/2025/industry-1.svg",
+    "https://chrisloy.dev/images/2025/industry-2.svg",
+    "https://chrisloy.dev/images/2025/industry-3.svg",
+    "https://chrisloy.dev/images/2025/industry-4.svg",
+    "https://chrisloy.dev/images/2025/industry-5.svg",
+    "https://chrisloy.dev/images/2025/industry-6.svg"
+  ],
+  "archiver": "Claude Code (Sonnet 4.5)",
+  "relevance_to_mcp_critique": "Article provides broader context for understanding industrialization of software development, disposable software concept, and the stewardship challenge that relates to MCP's complexity and maintenance concerns"
+}
