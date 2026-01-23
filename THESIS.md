@@ -11,16 +11,11 @@
 | **Cost** | More tokens consumed | Higher API bills |
 | **Quality** | Context saturation dilutes attention | Worse outputs, hallucinations |
 | **Latency** | More tokens to process | Slower responses |
+| **Compounding cost** | Lower quality, leads to errors accumulation, more tokens required to solve problem, more turn-arounds for agents (or they end up looping) | TODO clean up this line |
 
 **Quality degradation is most insidious** — errors compound in agentic workflows.
 
----
-
-## The Evidence
-
-1. **Anthropic's own data:** 150,000 → 2,000 tokens (98.7% reduction) when agents write code instead of calling MCP tools
-2. **Industry benchmarks:** CLI $0.37 vs MCP $0.48 for identical tasks (Mario Zechner)
-3. **Expert consensus:** "Models do not get smarter when you give them more tools" (Theo, t3.gg)
+**Expert consensus:** "Models do not get smarter when you give them more tools" (Theo, t3.gg)
 
 ---
 
@@ -28,37 +23,31 @@
 
 | MCP Approach | CLI/SDK Approach |
 |--------------|------------------|
-| Load all tool definitions upfront | `--help` on demand |
-| Intermediate results through model | Data filtered locally (pipes, jq) |
+| Load all tool definitions upfront | `--help` on demand or `tools_search(...)` fun |
+| All output goes through model | Model can decida on how data be processed without need of directly rewviewing all that data (pipes, `jq`, `yq`, `sk`, `rg`, scripting) |
 | Static tool definitions | Agents write ad-hoc scripts |
-| Protocol overhead | Pre-trained bash/git knowledge |
+| Fixed endpoints | Continous adaptation and optimization |
+| Protocol overhead | Pre-trained programming/git knowledge |
 
 ---
 
 ## Core Statements
 
-1. **Context efficiency > raw token price** — Opus 4.5 is Claude Code default despite higher cost because smarter decisions = fewer steps = cheaper overall
+1. **Context efficiency > raw token price** — higher per-token-cost model may be cheaper, because smarter decisions = less tokens to solve problem = fewer steps = fewer turn arounds for agents = cheaper overall or maybe even faster
 
-2. **CLI tools leverage pre-training** — Models already know bash, git, grep; no definitions needed
+2. **CLI tools leverage pre-training** — Models already know python, lua, js/ts, bash, git, grep, unix tools; no definitions needed
 
-3. **Self-documenting beats pre-loaded** — `tool --help` is lazy loading without protocol overhead
+3. **Self-documenting beats pre-loaded** — `tool --help`/`search_tools(...)` is loading on demand without protocol overhead
 
 4. **Code execution enables evolution** — Agents can optimize their own workflows; MCP tools are static
 
-5. **Aggregators don't solve bloat** — Docker/Microsoft gateways, MetaMCP consolidate endpoints but still load all definitions
+5. **Aggregators don't solve bloat** — Docker/Microsoft gateways, MetaMCP consolidate endpoints but still load all definitions, don't give scripting/programmability flexibilty, require processing all output as is by LLMs, and fundamentally as intermadiary like CLI tools (e.g. cli wrappers for existing mcp tools or directly to apis, etc)
 
 6. **Security via sandboxing** — OS-level isolation (bubblewrap, sandbox-exec) enables safe code execution
 
----
+7. **Reliabilty, security via asserts and sanity checks** — ability to program constraints, asserts, etc into CLI wrappers or own CLI wrappers around CLI wrappers, or functions to interface SDKs so users or even LLM can introduce additional sanity checks, **programmatic** validation of inputs, parameters, permissions before exeuction...
 
-## Key Numbers
-
-| Metric | Value |
-|--------|-------|
-| Token reduction (code exec vs MCP) | **98.7%** |
-| CLI vs MCP cost (benchmarked) | **$0.37 vs $0.48** |
-| MCP servers with production features | **~2%** |
-| Recommended max tools per agent | **3-5** |
+8. **Integration costs** - CLI tools are easier to produce, maintain in long term, build testing, run static dyanmic analyzers, fuzzers , etc...
 
 ---
 
