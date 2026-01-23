@@ -41,6 +41,9 @@ Instead of bloating context with MCP definitions, give LLMs:
 | **JSON output** | Pipe to `jq`, filter locally |
 | **SDK libraries** | Write code, not protocol calls |
 
+> "Standard CLI tool callable from bash (...) Output JSON for piping to `jq` (...) Integrates into Unix philosophy of small, composable tools (...) MCP servers require special integration, not shell-accessible."
+> — Carlo Zottmann, Linearis design principles ([archived](archived-resources/zottmann--linearis-linear-cli-built.md))
+
 **Result:** Data stays in sandbox. Tokens stay minimal. Code is deterministic.
 
 **Detailed analysis:** [CLI/SDK Over Context Bloat](cli-sdk-over-context-bloat.md)
