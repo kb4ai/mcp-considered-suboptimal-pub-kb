@@ -8,7 +8,7 @@
 
 In November 2025, Anthropic published a blog post effectively admitting MCP doesn't scale:
 
-> **150,000 → 2,000 tokens. A 98.7% reduction.**
+> ***150,000 → 2,000 tokens. A 98.7% reduction.***
 
 Their solution? Have agents write code instead of calling MCP tools directly.
 
