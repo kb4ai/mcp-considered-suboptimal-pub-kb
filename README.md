@@ -1,5 +1,7 @@
 # MCP Considered Suboptimal
 
+*A technical analysis — not a software project*
+
 **Premise:** Anthropic's Model Context Protocol (MCP) bloats context windows and makes LLMs dumber. Better alternative: give LLMs CLI tools they can script.
 
 **Quick reference:** [Core Thesis](THESIS.md) — concise summary to share
