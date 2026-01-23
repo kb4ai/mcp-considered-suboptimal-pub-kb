@@ -1,0 +1,30 @@
+{
+  "url": "https://dev.to/ramkey982/beyond-the-hype-understanding-the-limitations-of-anthropics-model-context-protocol-for-tool-48kk",
+  "title": "Beyond the Hype: Understanding the Limitations of Anthropic's Model Context Protocol for Tool Integration",
+  "author": {
+    "username": "ramkey982",
+    "display_name": "ram",
+    "profile_url": "https://dev.to/ramkey982"
+  },
+  "publication_date": "2025-04-04T17:19:34Z",
+  "last_edited": "2025-04-12",
+  "archive_date": "2026-01-23T00:00:00Z",
+  "platform": "DEV Community",
+  "tags": ["mcp", "genai"],
+  "article_type": "technical_analysis",
+  "content_type": "text/markdown",
+  "language": "en",
+  "description": "Analysis of the limitations of Anthropic's Model Context Protocol (MCP), examining stateful communication requirements, context window overload, and compatibility challenges with stateless REST APIs. Discusses alternatives like Agents.json and llms.txt.",
+  "key_topics": [
+    "Model Context Protocol (MCP)",
+    "Stateful vs Stateless Communication",
+    "Server-Sent Events (SSE)",
+    "Context Window Limitations",
+    "Tool Selection and RAG",
+    "Agents.json",
+    "llms.txt"
+  ],
+  "extraction_method": "jina.ai_reader + WebFetch",
+  "fetch_status": "success",
+  "word_count_approx": 800
+}
