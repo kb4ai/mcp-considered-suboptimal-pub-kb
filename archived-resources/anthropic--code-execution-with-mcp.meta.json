@@ -1,0 +1,41 @@
+{
+  "title": "Code Execution with MCP: Building More Efficient Agents",
+  "url": "https://www.anthropic.com/engineering/code-execution-with-mcp",
+  "source": "Anthropic Engineering Blog",
+  "publication_date": "2025-11-04",
+  "archive_date": "2026-01-23",
+  "archive_timestamp": "2026-01-23T00:00:00Z",
+  "authors": [
+    "Adam Jones",
+    "Conor Kelly"
+  ],
+  "contributors": [
+    "Jeremy Fox",
+    "Jerome Swannack",
+    "Stuart Ritchie",
+    "Molly Vorwerck",
+    "Matt Samuels",
+    "Maggie Vo"
+  ],
+  "key_statistics": {
+    "token_reduction_percentage": 98.7,
+    "tokens_before": 150000,
+    "tokens_after": 2000,
+    "reduction_factor": 75
+  },
+  "primary_topics": [
+    "Model Context Protocol (MCP)",
+    "Code Execution",
+    "Token Efficiency",
+    "Agent Architecture",
+    "Privacy Preservation",
+    "Tool Discovery"
+  ],
+  "document_type": "engineering_blog_post",
+  "significance": "Primary source acknowledging MCP inefficiency at scale and proposing code execution as solution",
+  "extraction_method": "WebFetch",
+  "content_format": "markdown",
+  "completeness": "full_article",
+  "code_examples_included": true,
+  "verification_status": "statistics_confirmed"
+}
