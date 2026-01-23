@@ -1,0 +1,12 @@
+# Local development
+.claude/settings.local.json
+
+# Editor configs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
