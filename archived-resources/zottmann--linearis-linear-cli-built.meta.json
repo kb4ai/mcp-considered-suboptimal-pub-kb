@@ -1,0 +1,50 @@
+{
+  "url": "https://zottmann.org/2025/09/03/linearis-my-linear-cli-built.html",
+  "title": "Linearis: A Linear CLI Tool Built for Humans (and LLM Agents)",
+  "author": "Carlo Zottmann",
+  "published_date": "2025-09-03",
+  "last_modified": "2025-11-03",
+  "archived_date": "2026-01-23",
+  "archived_by": "Claude Code Agent",
+  "extraction_method": "WebFetch",
+  "content_type": "blog_post",
+  "topics": [
+    "CLI design",
+    "LLM agents",
+    "Linear.app",
+    "MCP critique",
+    "token efficiency",
+    "developer tools",
+    "agent-friendly design",
+    "Unix philosophy"
+  ],
+  "key_technologies": [
+    "Node.js",
+    "Linear API",
+    "CLI",
+    "JSON",
+    "jq"
+  ],
+  "related_projects": {
+    "linearis": "https://github.com/czottmann/linearis",
+    "linear_app": "https://linear.app",
+    "linear_api": "https://developers.linear.app/docs/graphql/working-with-the-graphql-api"
+  },
+  "key_metrics": {
+    "mcp_server_token_cost": "~13000 tokens",
+    "mcp_server_features": "20+",
+    "linearis_needed_features": "3-4"
+  },
+  "design_patterns": [
+    "token_efficiency_first",
+    "agent_oriented_documentation",
+    "shell_first_philosophy",
+    "smart_id_resolution",
+    "composable_json_output",
+    "consistent_flag_structure",
+    "progressive_disclosure",
+    "focused_scope",
+    "prompt_integration_guidance",
+    "no_special_integration"
+  ]
+}
