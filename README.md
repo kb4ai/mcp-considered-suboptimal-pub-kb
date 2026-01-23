@@ -2,6 +2,8 @@
 
 **Premise:** Anthropic's Model Context Protocol (MCP) bloats context windows and makes LLMs dumber. Better alternative: give LLMs CLI tools they can script.
 
+**Quick reference:** [Core Thesis](THESIS.md) — concise summary to share
+
 ---
 
 ## The Smoking Gun
@@ -113,6 +115,7 @@ All archives include `.url` (source pointer) and `.meta.json` (structured metada
 
 ## Further Reading
 
+* **[Core Thesis](THESIS.md)** — Concise summary of the argument (shareable)
 * **[FAQ: MCP Alternatives & Advanced Patterns](FAQ.md)** — Aggregators, sandboxing, self-optimization
 * **[MCP Critique: Sources & Commentary](mcp-critique-sources.md)** — Comprehensive collection of industry voices
 
