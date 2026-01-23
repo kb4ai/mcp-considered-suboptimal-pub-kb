@@ -1,0 +1,34 @@
+{
+  "url": "https://simonwillison.net/2025/Nov/4/code-execution-with-mcp/",
+  "title": "Code execution with MCP: Building more efficient agents",
+  "author": "Simon Willison",
+  "published_date": "2025-11-04T23:56:00Z",
+  "archived_timestamp": "2026-01-23T01:32:55+01:00",
+  "archive_method": "jina.ai reader + WebFetch",
+  "content_type": "blog post commentary",
+  "tags": [
+    "ai",
+    "prompt-engineering",
+    "generative-ai",
+    "llms",
+    "anthropic",
+    "model-context-protocol",
+    "coding-agents"
+  ],
+  "related_urls": [
+    "https://www.anthropic.com/engineering/code-execution-with-mcp",
+    "https://simonwillison.net/2025/Oct/16/claude-skills/",
+    "https://x.com/AnthropicAI/status/1985846791842250860",
+    "https://modelcontextprotocol.io/community/communication"
+  ],
+  "description": "Simon Willison's commentary on Anthropic's proposal for integrating MCP tools with coding agents through code execution rather than traditional tool descriptions. Willison identifies key challenges with current MCP implementation (token consumption, inefficient tool chaining) and evaluates Anthropic's proposed solution of converting MCP tools into executable TypeScript functions.",
+  "key_insights": [
+    "Willison no longer uses MCP for coding agents, preferring CLI utilities and Playwright Python",
+    "Two main MCP challenges: tool descriptions consume context tokens, and tool chaining requires round-tripping through the LLM",
+    "Proposed solution: Convert MCP tools to TypeScript files on disk for zero-token cost and on-demand discovery",
+    "Benefits include faster execution, token savings, reduced errors, and better privacy for sensitive data",
+    "Critical limitation: Anthropic provides no implementation code, only conceptual framework"
+  ],
+  "retrieval_status": "success",
+  "word_count": 434
+}
