@@ -1,0 +1,76 @@
+{
+  "url": "https://hackernoon.com/98percent-of-mcp-servers-got-this-wrong-the-reason-why-the-protocol-never-worked",
+  "title": "98% of MCP Servers Got This Wrong: The Reason Why the Protocol Never Worked",
+  "author": "@hacker661972",
+  "author_profile": "https://hackernoon.com/u/hacker661972",
+  "publication_date": "2025-11-15",
+  "platform": "HackerNoon",
+  "archive_date": "2026-01-23",
+  "archived_by": "Claude Code (Sonnet 4.5)",
+  "content_type": "article",
+  "topics": [
+    "model-context-protocol",
+    "mcp",
+    "anthropic",
+    "what-is-mcp",
+    "mcp-problems",
+    "mcp-flaws",
+    "mcp-as-backend",
+    "a2a",
+    "machine-learning",
+    "artificial-intelligence"
+  ],
+  "also_published": "https://tyingshoelaces.com/blog/mcp-reckoning",
+  "credibility_score": "Original Reporting - GPTZero AI Detection: Model 3.7b - Confident this text is entirely human",
+  "read_count_at_archive": 356,
+  "key_statistics": {
+    "token_reduction_cited": "98.7%",
+    "mcp_servers_with_issues": "98%",
+    "production_ready_servers": "~2%",
+    "recommended_max_tools": "3-5"
+  },
+  "references": [
+    {
+      "title": "Code Execution with MCP",
+      "url": "https://www.anthropic.com/engineering/code-execution-with-mcp",
+      "source": "Anthropic Engineering Blog"
+    },
+    {
+      "title": "A2A Protocol Specification",
+      "url": "https://a2aprotocol.ai/",
+      "source": "A2A Protocol"
+    },
+    {
+      "title": "MCP Protocol Documentation",
+      "url": "https://modelcontextprotocol.io/",
+      "source": "Model Context Protocol"
+    },
+    {
+      "title": "Effective Context Engineering for AI Agents",
+      "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "source": "Anthropic Engineering"
+    },
+    {
+      "title": "Signal-to-Noise in LLMs",
+      "url": "https://huggingface.co/papers/2406.06623",
+      "source": "HuggingFace Papers"
+    },
+    {
+      "title": "Original Blog Post",
+      "url": "https://tyingshoelaces.com/blog/mcp-reckoning",
+      "source": "Tying Shoelaces Blog"
+    }
+  ],
+  "extraction_methods": [
+    "WebFetch tool",
+    "jina.ai reader API"
+  ],
+  "content_summary": "Critical analysis of Anthropic's Model Context Protocol arguing that 98% of MCP servers are architecturally flawed due to fundamental misunderstanding of LLM context efficiency requirements. Advocates for MCP as backend infrastructure with A2A as frontend, and migration to code execution patterns.",
+  "featured_in": [
+    "HackerNoon Archives 2025-11-15",
+    "Arweave",
+    "ViewBlock",
+    "HackerNoon Terminal"
+  ],
+  "arweave_tx": "dfHcB9IxhCghgCJRQst6kgGedsAv_3TeypVhczcxypQ"
+}
