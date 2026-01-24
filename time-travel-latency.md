@@ -48,31 +48,31 @@ sequenceDiagram
 
     User->>LLM: "Find urgent bugs mentioned in #engineering"
 
-    Note over LLM: Process request (~2s)
+    Note over LLM: Process request (~6s)
     LLM->>API1: MCP: slack.search("urgent bug")
     API1-->>LLM: 50 messages (3,000 tokens)
 
-    Note over LLM: Process results (~5s)
+    Note over LLM: Process results (~15s)
     LLM->>API2: MCP: linear.search(extracted_keywords)
     API2-->>LLM: 30 issues (4,000 tokens)
 
-    Note over LLM: Process results (~5s)
+    Note over LLM: Process results (~15s)
     LLM->>API3: MCP: github.search(issue_refs)
     API3-->>LLM: 20 PRs (2,500 tokens)
 
-    Note over LLM: Process results (~5s)
+    Note over LLM: Process results (~15s)
     LLM->>API1: MCP: slack.post(summary)
     API1-->>LLM: Confirmation (100 tokens)
 
-    Note over LLM: Final processing (~3s)
+    Note over LLM: Final processing (~9s)
     LLM-->>User: "Posted summary to #engineering"
 ```
 
 **Totals:**
 - **Round trips:** 4 (each through LLM)
 - **Tokens processed:** ~11,000
-- **LLM processing time:** ~20 seconds
-- **Total latency:** 30-80 seconds (depending on model/load)
+- **LLM processing time:** ~60 seconds (with large context window)
+- **Total latency:** 1.5-4 minutes (depending on model/load)
 
 ### Approach B: Executor Delegation (LLM out of the Loop)
 
@@ -87,7 +87,7 @@ sequenceDiagram
 
     User->>LLM: "Find urgent bugs mentioned in #engineering"
 
-    Note over LLM: Generate execution plan (~2s)
+    Note over LLM: Generate execution plan (~6s)
     LLM->>Executor: Execute script
 
     Note over Executor: Runs without LLM intervention
@@ -108,15 +108,15 @@ sequenceDiagram
 
     Executor-->>LLM: "Done: 15 urgent bugs found, summary posted"
 
-    Note over LLM: Minimal processing (~1s)
+    Note over LLM: Minimal processing (~3s)
     LLM-->>User: "Found 15 urgent bugs, posted summary"
 ```
 
 **Totals:**
 - **LLM round trips:** 1
 - **Tokens processed:** ~300 (plan + confirmation)
-- **LLM processing time:** ~3 seconds
-- **Total latency:** 5-15 seconds
+- **LLM processing time:** ~9 seconds (with large context window)
+- **Total latency:** 12-20 seconds
 
 ---
 
@@ -126,8 +126,8 @@ sequenceDiagram
 |--------|-------------------|---------------------------|-------------|
 | LLM round trips | 4 | 1 | **75% fewer** |
 | Tokens processed | 11,000 | 300 | **97% reduction** |
-| LLM inference time | ~20s | ~3s | **85% faster** |
-| Total latency | 30-80s | 5-15s | **75-80% faster** |
+| LLM inference time | ~60s | ~9s | **85% faster** |
+| Total latency | 1.5-4 min | 12-20s | **85-92% faster** |
 | API cost (at $3/1M tokens) | $0.033 | $0.0009 | **97% cheaper** |
 
 ---
@@ -215,7 +215,7 @@ async def executor_workflow(llm, query):
 
 | Actor | Speed | Role |
 |-------|-------|------|
-| LLM inference | Slow (~1-5s per call) | High-level planning, ambiguity resolution |
+| LLM inference | Slow (~3-15s per call with context) | High-level planning, ambiguity resolution |
 | Code execution | Fast (~10-100ms) | Data transformation, filtering, API chaining |
 | API calls | Medium (~100-500ms) | External data retrieval |
 
