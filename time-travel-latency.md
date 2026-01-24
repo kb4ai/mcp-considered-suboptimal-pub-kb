@@ -212,14 +212,17 @@ Anthropic's [Code Execution with MCP](https://www.anthropic.com/engineering/code
 ```python
 # LLM generates this code instead of making direct tool calls
 import mcp_client
+import asyncio
 
-def fetch_top_items(filter_params):
+async def fetch_top_items(filter_params):
     # Fast programmatic loop
-    results = mcp_client.query_database(filter_params)
+    results = await mcp_client.query_database(filter_params)
     top_3 = sorted(results, key=lambda x: x['score'], reverse=True)[:3]
     
     # Parallel fetching
-    details = [mcp_client.get_details(item['id']) for item in top_3]
+    details = await asyncio.gather(*[
+        mcp_client.get_details(item['id']) for item in top_3
+    ])
     
     # Compact summary for LLM
     return {
