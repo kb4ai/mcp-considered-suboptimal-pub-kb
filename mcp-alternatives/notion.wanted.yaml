@@ -1,0 +1,4 @@
+service: Notion
+mcp_exists: true
+existing_clis: []
+pain_points: No known agent-friendly CLI alternative

@@ -1,0 +1,6 @@
+service: Google Drive
+mcp_exists: true
+existing_clis:
+  - gdrive
+  - rclone
+pain_points: Need verification if existing CLIs work well with LLM agents

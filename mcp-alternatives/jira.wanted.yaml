@@ -1,0 +1,5 @@
+service: Jira
+mcp_exists: true
+existing_clis:
+  - jira-cli
+pain_points: Need verification if existing CLIs work well with LLM agents
