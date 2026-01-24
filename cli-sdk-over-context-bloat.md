@@ -76,6 +76,32 @@ gdrive --help       # Not 13,000 tokens of definitions
 > "Presenting tools as code on a file system allows models to read tool definitions on demand rather than reading them all up front."
 > — Anthropic, "Code Execution with MCP"
 
+### 5. Progressive Search & Filtering
+
+When results are too large, agents search iteratively like humans:
+
+```bash
+# Keyword search - find relevant files first
+rg "error" --files-with-matches | head -20
+
+# Fuzzy search - interactive narrowing (fzf, skim/sk)
+cat logs.txt | sk --query "timeout"
+
+# Chained filtering - progressively narrow
+gh issue list --limit 100 | jq '.[].title' | grep -i "auth" | head -10
+```
+
+**The pattern:**
+
+| MCP Approach | CLI/SDK Approach |
+|--------------|------------------|
+| Return all 500 results to context | `rg` / `grep` keyword filter |
+| Model processes everything | `fzf` / `sk` fuzzy interactive search |
+| Context overflow on large datasets | `head` / `tail` pagination |
+| No semantic filtering | Vector similarity search possible |
+
+> Agents don't need to see everything — they need to find what's relevant, like a human using search tools.
+
 ---
 
 ## The Industrialization Argument
@@ -106,7 +132,7 @@ Every user's needs differ. Generic MCP servers fail because:
 | Pattern | Example |
 |---------|---------|
 | Quick lookup | `gh issue view 123` |
-| Filtered search | `linearis issues list \| jq` |
+| Filtered search | `rg "pattern" \| sk \| head -10` |
 | Batch operations | `for id in $(cat ids.txt); do ...; done` |
 | Custom automation | Agent writes `sync-script.sh` |
 

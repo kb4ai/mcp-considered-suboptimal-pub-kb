@@ -24,7 +24,7 @@
 | MCP Approach | CLI/SDK Approach |
 |--------------|------------------|
 | Load all tool definitions upfront | `--help` on demand, `search_tools(...)` |
-| All output goes through model | Model decides processing without reviewing all data (pipes, `jq`, `yq`, `rg`, scripts) |
+| All output goes through model | Model decides processing without reviewing all data (pipes, `jq`, `yq`, `rg`, `sk`/`fzf`, scripts) |
 | Static tool definitions | Agents write ad-hoc scripts |
 | Fixed endpoints | Continuous adaptation and optimization |
 | Protocol overhead | Pre-trained programming/git knowledge |
