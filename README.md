@@ -40,7 +40,7 @@ Instead of bloating context with MCP definitions, give LLMs:
 |------|-----|
 | **Bash shell access** | Compose tools freely |
 | **Self-documenting CLIs** | `tool --help` loads only what's needed |
-| **JSON output** | Pipe to `jq`, filter locally |
+| **JSON output** | Pipe to [`jq`][jq], filter locally |
 | **SDK libraries** | Write code, not protocol calls |
 
 > "Standard CLI tool callable from bash (...) `usage` command provides complete documentation—agents self-document by reading output (...) Output JSON for piping to `jq` (...) Unix philosophy of small, composable tools (...) Leverage existing Bash tool instead of creating new tool type (...) Solve the problems you actually encounter."
@@ -159,3 +159,5 @@ The future is not bigger context windows. It's smarter tool design.
 ---
 
 *Archived 2026-01-23. All sources preserved with full attribution in `archived-resources/`.*
+
+[jq]: https://github.com/jqlang/jq

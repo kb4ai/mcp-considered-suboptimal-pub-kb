@@ -30,7 +30,7 @@ LLMs excel at writing code. Let them compose solutions:
 
 ```bash
 # Instead of 20+ MCP tools in context...
-linearis issues list -l 5 | jq '.[] | select(.priority == 1)'
+linearis issues list -l 5 | jq '.[] | select(.priority == 1)'  # jq for JSON filtering
 ```
 
 The model writes the glue code. Data stays local. Tokens stay minimal.
@@ -105,6 +105,9 @@ gh issue list --limit 100 | jq '.[].title' | grep -i "auth" | head -10
 [ripgrep]: https://github.com/BurntSushi/ripgrep
 [skim]: https://github.com/skim-rs/skim
 [fzf]: https://github.com/junegunn/fzf
+[jq]: https://github.com/jqlang/jq
+[yq]: https://github.com/mikefarah/yq
+[gh]: https://github.com/cli/cli
 
 ---
 
@@ -135,7 +138,7 @@ Every user's needs differ. Generic MCP servers fail because:
 
 | Pattern | Example |
 |---------|---------|
-| Quick lookup | `gh issue view 123` |
+| Quick lookup | [`gh`][gh] `issue view 123` |
 | Filtered search | `rg "pattern" \| sk -f "term" \| head -10` |
 | Batch operations | `for id in $(cat ids.txt); do ...; done` |
 | Custom automation | Agent writes `sync-script.sh` |
@@ -167,7 +170,7 @@ Provide:
 ### Minimum Viable CLI for LLM Agents
 
 1. **Self-documenting:** `tool usage` or `tool --help`
-2. **JSON output:** Composable with `jq`
+2. **JSON output:** Composable with [`jq`][jq]
 3. **Smart IDs:** Accept natural identifiers (`ABC-123` not UUIDs)
 4. **Focused scope:** 3-5 core operations, not 20+
 5. **Shell-first:** Callable from Bash, no special integration
@@ -180,8 +183,8 @@ Provide:
 Use your Bash tool to call these CLIs:
 
 - `linearis` for Linear (run `linearis usage` for docs)
-- `gh` for GitHub (standard GitHub CLI)
-- `curl` + `jq` for REST APIs
+- [`gh`][gh] for GitHub (standard GitHub CLI)
+- `curl` + [`jq`][jq] for REST APIs
 ```
 
 ---

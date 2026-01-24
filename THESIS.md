@@ -24,7 +24,7 @@
 | MCP Approach | CLI/SDK Approach |
 |--------------|------------------|
 | Load all tool definitions upfront | `--help` on demand, `search_tools(...)` |
-| All output goes through model | Model decides processing without reviewing all data (pipes, `jq`, `yq`, `rg`, `sk`/`fzf`, scripts) |
+| All output goes through model | Model decides processing without reviewing all data (pipes, [`jq`][jq], [`yq`][yq], [`rg`][ripgrep], [`sk`][skim]/[`fzf`][fzf], scripts) |
 | Static tool definitions | Agents write ad-hoc scripts |
 | Fixed endpoints | Continuous adaptation and optimization |
 | Protocol overhead | Pre-trained programming/git knowledge |
@@ -62,3 +62,9 @@
 ---
 
 *Part of [MCP Considered Suboptimal](https://github.com/kb4ai/mcp-considered-suboptimal-pub-kb)*
+
+[jq]: https://github.com/jqlang/jq
+[yq]: https://github.com/mikefarah/yq
+[ripgrep]: https://github.com/BurntSushi/ripgrep
+[skim]: https://github.com/skim-rs/skim
+[fzf]: https://github.com/junegunn/fzf
