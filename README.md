@@ -104,6 +104,7 @@ Instead of bloating context with MCP definitions, give LLMs:
 ## Further Reading
 
 * **[Core Thesis](THESIS.md)** — Concise summary of the argument (shareable)
+* **[Why This Repo?](WHY_THIS_REPO.md)** — Use cases, audiences, share templates
 * **[Time-Traveling RPC for LLM Executors](time-travel-latency.md)** — Why executors beat MCP (latency analysis with diagrams)
 * **[MCP Alternatives](mcp-alternatives.md)** — CLI tools that replace MCP servers (contribute yours!)
 * **[FAQ: MCP Alternatives & Advanced Patterns](FAQ.md)** — Aggregators, sandboxing, self-optimization
