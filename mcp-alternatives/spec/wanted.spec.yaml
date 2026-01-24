@@ -1,0 +1,37 @@
+# Schema for wanted entries (*.wanted.yaml)
+# All fields optional - low barrier for contributions
+
+name: wanted
+description: Request for a CLI alternative to an MCP server
+file_pattern: "*.wanted.yaml"
+
+required: []
+
+fields:
+  service:
+    type: string
+    description: Service name
+    examples:
+      - "Notion"
+      - "Jira"
+
+  mcp_exists:
+    type: boolean
+    description: Is there an MCP server for this service?
+    default: true
+
+  existing_clis:
+    type: list
+    description: Known CLI tools that might work (unverified)
+    items:
+      type: string
+    examples:
+      - ["jira-cli", "go-jira"]
+
+  pain_points:
+    type: string
+    description: What's wrong with current options
+
+  requested_by:
+    type: string
+    description: GitHub username or "anonymous"
