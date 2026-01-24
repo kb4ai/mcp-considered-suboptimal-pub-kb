@@ -101,34 +101,6 @@ Instead of bloating context with MCP definitions, give LLMs:
 
 ---
 
-## Repository Structure
-
-```
-.
-├── README.md                          ← You are here
-├── THESIS.md                          ← Core thesis (shareable summary)
-├── mcp-alternatives.md                ← CLI tools replacing MCP servers
-├── FAQ.md                             ← Advanced questions & patterns
-├── mcp-critique-sources.md            ← Industry voices & references
-├── cli-sdk-over-context-bloat.md      ← Detailed analysis & patterns
-├── time-travel-latency.md             ← Why executors beat MCP (latency analysis)
-├── TODO.md                            ← Pending archival & research tasks
-└── archived-resources/                ← Source material with timestamps
-    ├── anthropic--code-execution-with-mcp.md
-    ├── chrisloy--rise-of-industrial-software.md
-    ├── devto--beyond-hype-mcp-limitations.md
-    ├── hackernoon--98-percent-mcp-servers-wrong.md
-    ├── medium--mcp-wrong-98-percent-cost-reduction.md
-    ├── simonwillison--code-execution-mcp-commentary.md
-    ├── theo-t3gg--anthropic-admits-mcp-sucks--transcript.md
-    ├── zottmann--linearis-linear-cli-built.md
-    └── artofsmart--anthropic-admits-mcp-wrong.md
-```
-
-All archives include `.url` (source pointer) and `.meta.json` (structured metadata) companions.
-
----
-
 ## Further Reading
 
 * **[Core Thesis](THESIS.md)** — Concise summary of the argument (shareable)
@@ -155,7 +127,7 @@ All archives include `.url` (source pointer) and `.meta.json` (structured metada
 
 When building for LLM agents:
 
-1. **Prefer CLI tools** over MCP servers
+1. **Prefer CLI/SDK tools** over MCP servers
 2. **Expose `--help`** or `usage` commands
 3. **Output JSON** for composability
 4. **Limit scope** to 3-5 core operations
