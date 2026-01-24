@@ -1,6 +1,10 @@
 # Local development
 .claude/settings.local.json
 
+# Python
+__pycache__/
+*.pyc
+
 # Editor configs
 .vscode/
 .idea/
