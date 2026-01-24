@@ -1,0 +1,98 @@
+# Schema for CLI tool entries (*.cli.yaml)
+# All fields optional except 'repo'
+
+name: cli
+description: CLI tool that replaces an MCP server
+file_pattern: "*.cli.yaml"
+
+required:
+  - repo
+
+fields:
+  repo:
+    type: string
+    description: GitHub/GitLab URL or owner/repo shorthand
+    examples:
+      - "github.com/czottmann/linearis"
+      - "cli/cli"
+
+  name:
+    type: string
+    description: Display name (derived from repo if omitted)
+    examples:
+      - "Linearis"
+      - "gh"
+
+  service:
+    type: string
+    description: What service/API it interfaces with
+    examples:
+      - "Linear"
+      - "GitHub"
+
+  replaces_mcp:
+    type: string
+    description: Name of MCP server it replaces
+    examples:
+      - "Official Linear MCP"
+
+  token_comparison:
+    type: string
+    description: Before/after token usage comparison
+    examples:
+      - "~13k → ~200"
+
+  description:
+    type: string
+    description: Brief explanation of what it does
+
+  quote:
+    type: object
+    description: Pull quote about the tool
+    fields:
+      text:
+        type: string
+        required: true
+      source:
+        type: string
+        description: Author or article name
+      url:
+        type: string
+        description: Link to source
+
+  resources:
+    type: list
+    description: Related links (articles, gists, docs)
+    items:
+      type: object
+      fields:
+        label:
+          type: string
+          required: true
+        url:
+          type: string
+          required: true
+        archived:
+          type: string
+          description: Path to archived copy in archived-resources/
+
+  author:
+    type: string
+    description: Tool author/maintainer
+
+  tags:
+    type: list
+    items:
+      type: string
+    examples:
+      - ["issue-tracking", "project-management"]
+      - ["vcs", "code-review"]
+
+  maturity:
+    type: enum
+    values: [alpha, beta, stable, unknown]
+    default: unknown
+
+  last_verified:
+    type: date
+    description: When we last confirmed it works (YYYY-MM-DD)
