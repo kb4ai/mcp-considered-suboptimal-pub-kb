@@ -6,23 +6,30 @@
 
 ## "Isn't MCP's problem just token cost?"
 
-No. The problem is **threefold**:
+No. The problem is **fourfold**:
 
 | Issue | Impact |
 |-------|--------|
 | **Cost** | More tokens = more $$$ |
 | **Quality** | Context saturation → distracted model → worse outputs |
 | **Latency** | More tokens = slower responses |
+| **Compounding** | Wrong decisions → more steps → error cascades → recovery loops |
 
-**Quality degradation is the most insidious:**
+**Compounding is the most insidious:**
 
-When models process 100k+ tokens of tool definitions, they become "distracted" — attention diluted across irrelevant context. This manifests as:
+When models process 100k+ tokens of tool definitions, they become "distracted" — attention diluted across irrelevant context. This causes:
 
 * Missing obvious solutions
 * Hallucinating tool parameters
 * Failing to compose tools effectively
 
-**In agentic workflows, errors compound:**
+**In agentic workflows, errors cascade:**
+
+```
+Wrong tool choice → partial result → retry different tool →
+still wrong → LLM "explores" → 5 steps become 15 →
+context bloats further → quality degrades more
+```
 
 * Lower quality step → wrong direction
 * Wrong direction → more errors

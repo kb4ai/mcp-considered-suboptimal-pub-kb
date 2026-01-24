@@ -4,27 +4,43 @@
 
 ---
 
-## The Problem: MCP is Threefold Bad
+## The Problem: MCP is Fourfold Bad
 
 | Issue | Mechanism | Impact |
 |-------|-----------|--------|
 | **Cost** | More tokens consumed | Higher API bills |
 | **Quality** | Context saturation dilutes attention | Worse outputs, hallucinations |
 | **Latency** | More tokens to process | Slower responses |
-| **Compounding** | Lower quality → error accumulation → more tokens to recover → agent loops | Multiplied waste |
+| **Compounding** | Lower quality → wrong direction → more steps → error accumulation → recovery loops | Multiplied waste |
 
-**Quality degradation is most insidious** — errors compound in agentic workflows.
+**Compounding is most insidious** — in agentic workflows, one bad decision cascades:
+
+```
+Wrong tool choice → partial result → retry with different tool →
+still wrong → LLM "explores" → 5 steps become 15 → context bloats further → quality degrades more
+```
 
 **Expert consensus:** "Models do not get smarter when you give them more tools" (Theo, t3.gg)
 
 ---
 
-## The Alternative: CLI/SDK Tools
+## The Alternative: UNIX-Philosophy CLI Tools
+
+Not just "any CLI" — tools designed for composability:
+
+| Principle | What It Means | Why It Matters |
+|-----------|---------------|----------------|
+| **KISS** | 3-5 focused operations, not 20+ | Less to load, less to confuse |
+| **JSON/JSONL output** | Machine-readable, pipe to `jq` | Filter data BEFORE it hits context |
+| **Self-documenting** | `--help` / `usage` on demand | Load docs only when needed |
+| **Shell-first** | Standard CLI, no special integration | Works with any agent that has bash |
+| **Composable** | Pipes, filters, scripts | Agents chain tools freely |
+| **Leverage pre-training** | bash, git, jq already known | No protocol overhead to learn |
 
 | MCP Approach | CLI/SDK Approach |
 |--------------|------------------|
 | Load all tool definitions upfront | `--help` on demand, `search_tools(...)` |
-| All output goes through model | Model decides processing without reviewing all data (pipes, [`jq`][jq], [`yq`][yq], [`rg`][ripgrep], [`sk`][skim]/[`fzf`][fzf], scripts) |
+| All output goes through model | Filter first (pipes, [`jq`][jq], [`yq`][yq], [`rg`][ripgrep], [`sk`][skim]/[`fzf`][fzf]) |
 | Static tool definitions | Agents write ad-hoc scripts |
 | Fixed endpoints | Continuous adaptation and optimization |
 | Protocol overhead | Pre-trained programming/git knowledge |

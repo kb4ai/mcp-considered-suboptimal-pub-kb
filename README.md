@@ -23,25 +23,31 @@ Source: [Code Execution with MCP](https://www.anthropic.com/engineering/code-exe
 > "Models do not get smarter when you give them more tools. They get smarter when you give them a small subset of really good tools."
 > — Theo, t3.gg ([video transcript](archived-resources/theo-t3gg--anthropic-admits-mcp-sucks--transcript.md))
 
-**MCP's Fatal Flaw:**
+**MCP's Fourfold Problem:**
 
-* Encourages adding hundreds of tools to context
-* Each tool definition = tokens consumed before any work
-* Intermediate results pass through model repeatedly
-* No progressive discovery—all definitions loaded upfront
+| Issue | Impact |
+|-------|--------|
+| **Cost** | More tokens = higher API bills |
+| **Quality** | Context saturation → distracted model → worse outputs |
+| **Latency** | More tokens = slower responses |
+| **Compounding** | Wrong decisions → more steps → error cascades → recovery loops |
+
+**Compounding is worst:** One bad tool choice leads to retries, exploration, 5 steps becoming 15.
 
 ---
 
-## The Alternative: CLI/SDK Tools
+## The Alternative: UNIX-Philosophy CLI Tools
 
-Instead of bloating context with MCP definitions, give LLMs:
+Not just "any CLI" — tools built for composability and agent workflows:
 
-| What | Why |
-|------|-----|
-| **Bash shell access** | Compose tools freely |
-| **Self-documenting CLIs** | `tool --help` loads only what's needed |
-| **JSON output** | Pipe to [`jq`][jq], filter locally |
-| **SDK libraries** | Write code, not protocol calls |
+| Principle | Implementation | Benefit |
+|-----------|----------------|---------|
+| **KISS** | 3-5 focused operations | Less to load, less confusion |
+| **JSON/JSONL output** | `--json` flag, machine-readable | Filter BEFORE hitting context |
+| **Self-documenting** | `--help` / `usage` command | Load docs on demand, not upfront |
+| **Shell-first** | Standard CLI, no special protocol | Works with any bash-capable agent |
+| **Composable** | Pipes to [`jq`][jq], [`rg`][ripgrep], scripts | Chain tools, filter locally |
+| **Pre-trained** | bash, git, grep already known | Zero protocol overhead |
 
 > "Standard CLI tool callable from bash (...) `usage` command provides complete documentation—agents self-document by reading output (...) Output JSON for piping to `jq` (...) Unix philosophy of small, composable tools (...) Leverage existing Bash tool instead of creating new tool type (...) Solve the problems you actually encounter."
 > — Carlo Zottmann, Linearis design principles ([archived](archived-resources/zottmann--linearis-linear-cli-built.md))
