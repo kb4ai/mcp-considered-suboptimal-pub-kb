@@ -1,0 +1,5 @@
+# GENERATED: CLI Tools
+# This marker tells the regenerate script to insert CLI tool entries here.
+# Do not edit - content is generated from *.cli.yaml files.
+type: cli
+heading: "## Alternatives by Service"
