@@ -49,12 +49,15 @@
 
 8. **Lower integration costs** — CLI tools are easier to produce, maintain long-term, test, and analyze (static/dynamic analyzers, fuzzers)
 
+9. **Executors minimize latency** — Keep slow actors (LLM inference) out of fast loops (API chaining, filtering); a 4-call MCP workflow becomes 1 executor call with 97% fewer tokens ([details](time-travel-latency.md))
+
 ---
 
 ## Further Reading
 
 * [README.md](README.md) — Full argument with quotes
 * [mcp-alternatives.md](mcp-alternatives.md) — CLI tools that replace MCP servers
+* [time-travel-latency.md](time-travel-latency.md) — Latency analysis: why executors beat MCP
 * [FAQ.md](FAQ.md) — Aggregators, lazy loading, sandboxing, self-optimization
 * [mcp-critique-sources.md](mcp-critique-sources.md) — Industry voices collection
 * [cli-sdk-over-context-bloat.md](cli-sdk-over-context-bloat.md) — Detailed analysis

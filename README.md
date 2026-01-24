@@ -98,6 +98,7 @@ Instead of bloating context with MCP definitions, give LLMs:
 ├── FAQ.md                             ← Advanced questions & patterns
 ├── mcp-critique-sources.md            ← Industry voices & references
 ├── cli-sdk-over-context-bloat.md      ← Detailed analysis & patterns
+├── time-travel-latency.md             ← Why executors beat MCP (latency analysis)
 ├── TODO.md                            ← Pending archival & research tasks
 └── archived-resources/                ← Source material with timestamps
     ├── anthropic--code-execution-with-mcp.md
@@ -118,6 +119,7 @@ All archives include `.url` (source pointer) and `.meta.json` (structured metada
 ## Further Reading
 
 * **[Core Thesis](THESIS.md)** — Concise summary of the argument (shareable)
+* **[Time-Traveling RPC for LLM Executors](time-travel-latency.md)** — Why executors beat MCP (latency analysis with diagrams)
 * **[MCP Alternatives](mcp-alternatives.md)** — CLI tools that replace MCP servers (contribute yours!)
 * **[FAQ: MCP Alternatives & Advanced Patterns](FAQ.md)** — Aggregators, sandboxing, self-optimization
 * **[MCP Critique: Sources & Commentary](mcp-critique-sources.md)** — Comprehensive collection of industry voices
@@ -130,8 +132,9 @@ All archives include `.url` (source pointer) and `.meta.json` (structured metada
 2. **Code execution works** — 98.7% token savings prove it
 3. **CLIs are self-documenting** — `--help` on demand, not upfront
 4. **Scripts are deterministic** — No hallucination in execution
-5. **Industrialization needs stewardship** — Generic tools, custom composition
-6. **Software engineering patterns apply** — APIs > Protocols
+5. **Executors minimize latency** — Keep LLMs out of fast loops ([details](time-travel-latency.md))
+6. **Industrialization needs stewardship** — Generic tools, custom composition
+7. **Software engineering patterns apply** — APIs > Protocols
 
 ---
 
