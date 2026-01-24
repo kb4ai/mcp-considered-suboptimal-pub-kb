@@ -1,0 +1,27 @@
+repo: github.com/cli/cli
+name: gh
+service: GitHub
+replaces_mcp: GitHub MCP servers
+description: Official GitHub CLI - pre-trained in LLMs, fully scriptable
+
+resources:
+  - label: GitHub Repository
+    url: https://github.com/cli/cli
+  - label: Documentation
+    url: https://cli.github.com/manual/
+
+tags:
+  - vcs
+  - code-review
+  - issues
+  - pull-requests
+
+maturity: stable
+
+examples:
+  - command: "gh issue list --limit 20 --json title,number | jq '.[].title'"
+    description: List issue titles
+  - command: "gh pr view 123 --json body,reviews"
+    description: View PR details
+  - command: "gh api repos/owner/repo/commits --paginate | jq '.[].sha'"
+    description: List commit SHAs

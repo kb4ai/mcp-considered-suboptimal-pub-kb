@@ -1,0 +1,11 @@
+repo: github.com/CLIAI/slack-cli-mcp-wrapper
+name: slack-cli-mcp-wrapper
+service: Slack
+replaces_mcp: Official Slack MCP
+description: CLI wrapper providing Slack access that agents can script, filter, and audit
+
+tags:
+  - chat
+  - messaging
+
+maturity: unknown

@@ -1,0 +1,27 @@
+repo: github.com/czottmann/linearis
+name: Linearis
+service: Linear
+replaces_mcp: Official Linear MCP
+token_comparison: "~13k → ~200"
+description: CLI tool for Linear issue tracking, built for LLM agents
+author: Carlo Zottmann
+
+quote:
+  text: "Token budget matters: 13k tokens for tool definitions is prohibitive. Simplicity wins: 3-4 features beats 20+ for real workflows."
+  source: Carlo Zottmann
+  url: https://zottmann.org/2025/09/03/linearis-my-linear-cli-built.html
+
+resources:
+  - label: GitHub Repository
+    url: https://github.com/czottmann/linearis
+  - label: Design Article
+    url: https://zottmann.org/2025/09/03/linearis-my-linear-cli-built.html
+    archived: archived-resources/zottmann--linearis-linear-cli-built.md
+  - label: Workarounds & Extensions
+    url: https://gist.github.com/g-click-trade/3d73f0492abd2e5c75baa863053867dc
+
+tags:
+  - issue-tracking
+  - project-management
+
+maturity: stable
