@@ -48,7 +48,7 @@ Instead of bloating context with MCP definitions, give LLMs:
 
 **Result:** Data stays in sandbox. Tokens stay minimal. Code is deterministic.
 
-**Detailed analysis:** [CLI/SDK Over Context Bloat](cli-sdk-over-context-bloat.md)
+**Detailed analysis:** [CLI/SDK Over Context Bloat](cli-sdk-over-context-bloat.md) | [Time-Travel Latency (with diagrams)](time-travel-latency.md)
 
 ---
 
@@ -94,6 +94,7 @@ Instead of bloating context with MCP definitions, give LLMs:
 .
 ├── README.md                          ← You are here
 ├── THESIS.md                          ← Core thesis (shareable summary)
+├── time-travel-latency.md             ← Why executor flows beat direct calls (with diagrams)
 ├── mcp-alternatives.md                ← CLI tools replacing MCP servers
 ├── FAQ.md                             ← Advanced questions & patterns
 ├── mcp-critique-sources.md            ← Industry voices & references
@@ -118,6 +119,7 @@ All archives include `.url` (source pointer) and `.meta.json` (structured metada
 ## Further Reading
 
 * **[Core Thesis](THESIS.md)** — Concise summary of the argument (shareable)
+* **[Time-Travel Latency](time-travel-latency.md)** — Why executor flows beat direct calls (with diagrams)
 * **[MCP Alternatives](mcp-alternatives.md)** — CLI tools that replace MCP servers (contribute yours!)
 * **[FAQ: MCP Alternatives & Advanced Patterns](FAQ.md)** — Aggregators, sandboxing, self-optimization
 * **[MCP Critique: Sources & Commentary](mcp-critique-sources.md)** — Comprehensive collection of industry voices

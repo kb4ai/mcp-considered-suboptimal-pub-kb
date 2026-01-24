@@ -54,6 +54,7 @@
 ## Further Reading
 
 * [README.md](README.md) — Full argument with quotes
+* [time-travel-latency.md](time-travel-latency.md) — Why executor flows beat direct calls (with diagrams)
 * [mcp-alternatives.md](mcp-alternatives.md) — CLI tools that replace MCP servers
 * [FAQ.md](FAQ.md) — Aggregators, lazy loading, sandboxing, self-optimization
 * [mcp-critique-sources.md](mcp-critique-sources.md) — Industry voices collection
