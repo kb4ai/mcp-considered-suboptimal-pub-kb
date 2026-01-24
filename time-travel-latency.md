@@ -40,32 +40,40 @@ This creates a fundamental latency bottleneck: **the LLM sits in every decision 
 
 ```mermaid
 sequenceDiagram
-    participant User
-    participant LLM
-    participant API1 as Slack API
-    participant API2 as Linear API
-    participant API3 as GitHub API
+    autonumber
+    participant U as 👤 User
+    participant L as 🤖 LLM<br/>(slow token processing)
+    participant S as 💬 Slack API
+    participant R as 📋 Linear API
+    participant G as 🐙 GitHub API
 
-    User->>LLM: "Find urgent bugs mentioned in #engineering"
+    U->>L: "Find urgent bugs mentioned in #engineering"
 
-    Note over LLM: Process request (~6s)
-    LLM->>API1: MCP: slack.search("urgent bug")
-    API1-->>LLM: 50 messages (3,000 tokens)
+    rect rgba(255,200,200,0.3)
+    note over L,G: ❌ Approach A: LLM processes every response
 
-    Note over LLM: Process results (~15s)
-    LLM->>API2: MCP: linear.search(extracted_keywords)
-    API2-->>LLM: 30 issues (4,000 tokens)
+    note over L: 🐌 Parse request<br/>🐌 Plan first call<br/>(~6s)
+    L->>S: MCP: slack.search("urgent bug")
+    S-->>L: 50 messages (3,000 tokens)
 
-    Note over LLM: Process results (~15s)
-    LLM->>API3: MCP: github.search(issue_refs)
-    API3-->>LLM: 20 PRs (2,500 tokens)
+    note over L: 🐌 Parse 3,000 tokens<br/>🐌 Extract keywords<br/>🐌 Decide next call<br/>(~15s)
+    L->>R: MCP: linear.search(extracted_keywords)
+    R-->>L: 30 issues (4,000 tokens)
 
-    Note over LLM: Process results (~15s)
-    LLM->>API1: MCP: slack.post(summary)
-    API1-->>LLM: Confirmation (100 tokens)
+    note over L: 🐌 Parse 4,000 tokens<br/>🐌 Extract issue refs<br/>🐌 Decide next call<br/>(~15s)
+    L->>G: MCP: github.search(issue_refs)
+    G-->>L: 20 PRs (2,500 tokens)
 
-    Note over LLM: Final processing (~9s)
-    LLM-->>User: "Posted summary to #engineering"
+    note over L: 🐌 Parse 2,500 tokens<br/>🐌 Correlate all data<br/>🐌 Generate summary<br/>(~15s)
+    L->>S: MCP: slack.post(summary)
+    S-->>L: Confirmation (100 tokens)
+
+    note over L: 🐌 Parse confirmation<br/>🐌 Generate response<br/>(~9s)
+    end
+
+    L-->>U: "Posted summary to #engineering"
+
+    note over L,G: ⏱️ Total: 4 LLM round-trips<br/>📊 ~11,000 tokens processed<br/>🐌 ~60s LLM time → 1.5-4 min total
 ```
 
 **Totals:**
@@ -78,38 +86,49 @@ sequenceDiagram
 
 ```mermaid
 sequenceDiagram
-    participant User
-    participant LLM
-    participant Executor as Code Executor
-    participant API1 as Slack API
-    participant API2 as Linear API
-    participant API3 as GitHub API
+    autonumber
+    participant U as 👤 User
+    participant L as 🤖 LLM<br/>(slow token processing)
+    participant E as ⚙️ Code Executor<br/>(Python/Bash)
+    participant S as 💬 Slack API
+    participant R as 📋 Linear API
+    participant G as 🐙 GitHub API
 
-    User->>LLM: "Find urgent bugs mentioned in #engineering"
+    U->>L: "Find urgent bugs mentioned in #engineering"
 
-    Note over LLM: Generate execution plan (~6s)
-    LLM->>Executor: Execute script
+    rect rgba(200,255,200,0.3)
+    note over L,G: ✅ Approach B: LLM delegates, executor chains
 
-    Note over Executor: Runs without LLM intervention
-    Executor->>API1: slack search "urgent bug"
-    API1-->>Executor: 50 messages
+    note over L: 🎯 Parse request<br/>🎯 Generate script<br/>(~6s)
+    L->>E: Execute pipeline script
 
-    Note over Executor: Filter locally with jq/grep
-    Executor->>API2: linear search --filter keywords
-    API2-->>Executor: 30 issues
+    rect rgba(230,230,230,0.2)
+    note over E,G: ⚡ Fast programmatic loop (no LLM)
 
-    Note over Executor: Filter & correlate locally
-    Executor->>API3: gh search --refs extracted
-    API3-->>Executor: 20 PRs
+    E->>S: slack search "urgent bug" --json
+    S-->>E: 50 messages (raw JSON)
+    note over E: ⚡ jq filter (5ms)<br/>⚡ grep extract refs (2ms)
 
-    Note over Executor: Format summary locally
-    Executor->>API1: slack post --channel engineering
-    API1-->>Executor: Confirmation
+    E->>R: linear search --refs extracted --json
+    R-->>E: 30 issues (raw JSON)
+    note over E: ⚡ jq filter priority (3ms)<br/>⚡ Extract issue IDs (1ms)
 
-    Executor-->>LLM: "Done: 15 urgent bugs found, summary posted"
+    E->>G: gh search prs --refs extracted --json
+    G-->>E: 20 PRs (raw JSON)
+    note over E: ⚡ jq correlate (5ms)<br/>⚡ Format summary (2ms)
 
-    Note over LLM: Minimal processing (~3s)
-    LLM-->>User: "Found 15 urgent bugs, posted summary"
+    E->>S: slack post --channel engineering
+    S-->>E: Confirmation
+    end
+
+    E-->>L: "Done: 15 urgent bugs, summary posted"<br/>(~100 tokens)
+
+    note over L: 🎯 Parse result<br/>🎯 Generate response<br/>(~3s)
+    end
+
+    L-->>U: "Found 15 urgent bugs, posted summary"
+
+    note over L,G: ⏱️ Total: 1 LLM round-trip<br/>📊 ~300 tokens processed<br/>⚡ ~9s LLM time → 12-20s total
 ```
 
 **Totals:**
