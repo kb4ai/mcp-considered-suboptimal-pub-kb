@@ -36,6 +36,8 @@ This creates a fundamental latency bottleneck: **the LLM sits in every decision 
 
 ## Visual Comparison
 
+*Note: All latency and token numbers below are illustrative examples to demonstrate the principle. Actual values vary by model, context size, API response times, and workload.*
+
 ### Approach A: Direct MCP Calls (LLM in the Loop)
 
 ```mermaid
@@ -140,6 +142,8 @@ sequenceDiagram
 ---
 
 ## The Math
+
+*Illustrative example — actual numbers depend on model, context, and workload:*
 
 | Metric | MCP (LLM in loop) | Executor (LLM out of loop) | Improvement |
 |--------|-------------------|---------------------------|-------------|
