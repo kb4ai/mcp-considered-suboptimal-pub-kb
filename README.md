@@ -50,6 +50,19 @@ Instead of bloating context with MCP definitions, give LLMs:
 
 **Detailed analysis:** [CLI/SDK Over Context Bloat](cli-sdk-over-context-bloat.md)
 
+<table>
+<tr>
+<td><a href="time-travel-latency.md"><img src="assets/approach-a-direct-mcp-calls-llm-in-loop.png" alt="Approach A: LLM in Loop" width="400"/></a></td>
+<td><a href="time-travel-latency.md"><img src="assets/approach-b-executor-delegation-llm-out-of-loop.png" alt="Approach B: LLM out of Loop" width="400"/></a></td>
+</tr>
+<tr>
+<td align="center"><em>Approach A: Direct MCP (high latency)</em></td>
+<td align="center"><em>Approach B: Executor Delegation (low latency)</em></td>
+</tr>
+</table>
+
+*Click images for [detailed latency analysis](time-travel-latency.md)*
+
 ---
 
 ## Key Numbers
