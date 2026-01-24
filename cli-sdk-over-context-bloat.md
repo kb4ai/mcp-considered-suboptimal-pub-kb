@@ -84,8 +84,8 @@ When results are too large, agents search iteratively like humans:
 # Keyword search - find relevant files first
 rg "error" --files-with-matches | head -20
 
-# Fuzzy search - interactive narrowing (fzf, skim/sk)
-cat logs.txt | sk --query "timeout"
+# Fuzzy search - non-interactive filter mode (skim/sk, fzf)
+cat logs.txt | sk -f "timeout"
 
 # Chained filtering - progressively narrow
 gh issue list --limit 100 | jq '.[].title' | grep -i "auth" | head -10
@@ -95,12 +95,16 @@ gh issue list --limit 100 | jq '.[].title' | grep -i "auth" | head -10
 
 | MCP Approach | CLI/SDK Approach |
 |--------------|------------------|
-| Return all 500 results to context | `rg` / `grep` keyword filter |
-| Model processes everything | `fzf` / `sk` fuzzy interactive search |
+| Return all 500 results to context | [`rg`][ripgrep] / `grep` keyword filter |
+| Model processes everything | [`sk`][skim] / [`fzf`][fzf] fuzzy filter (`-f`) |
 | Context overflow on large datasets | `head` / `tail` pagination |
 | No semantic filtering | Vector similarity search possible |
 
 > Agents don't need to see everything — they need to find what's relevant, like a human using search tools.
+
+[ripgrep]: https://github.com/BurntSushi/ripgrep
+[skim]: https://github.com/skim-rs/skim
+[fzf]: https://github.com/junegunn/fzf
 
 ---
 
@@ -132,7 +136,7 @@ Every user's needs differ. Generic MCP servers fail because:
 | Pattern | Example |
 |---------|---------|
 | Quick lookup | `gh issue view 123` |
-| Filtered search | `rg "pattern" \| sk \| head -10` |
+| Filtered search | `rg "pattern" \| sk -f "term" \| head -10` |
 | Batch operations | `for id in $(cat ids.txt); do ...; done` |
 | Custom automation | Agent writes `sync-script.sh` |
 
