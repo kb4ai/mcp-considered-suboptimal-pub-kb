@@ -54,6 +54,7 @@
 ## Further Reading
 
 * [README.md](README.md) — Full argument with quotes
+* [mcp-alternatives.md](mcp-alternatives.md) — CLI tools that replace MCP servers
 * [FAQ.md](FAQ.md) — Aggregators, lazy loading, sandboxing, self-optimization
 * [mcp-critique-sources.md](mcp-critique-sources.md) — Industry voices collection
 * [cli-sdk-over-context-bloat.md](cli-sdk-over-context-bloat.md) — Detailed analysis

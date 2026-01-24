@@ -93,6 +93,8 @@ Instead of bloating context with MCP definitions, give LLMs:
 ```
 .
 ├── README.md                          ← You are here
+├── THESIS.md                          ← Core thesis (shareable summary)
+├── mcp-alternatives.md                ← CLI tools replacing MCP servers
 ├── FAQ.md                             ← Advanced questions & patterns
 ├── mcp-critique-sources.md            ← Industry voices & references
 ├── cli-sdk-over-context-bloat.md      ← Detailed analysis & patterns
@@ -116,6 +118,7 @@ All archives include `.url` (source pointer) and `.meta.json` (structured metada
 ## Further Reading
 
 * **[Core Thesis](THESIS.md)** — Concise summary of the argument (shareable)
+* **[MCP Alternatives](mcp-alternatives.md)** — CLI tools that replace MCP servers (contribute yours!)
 * **[FAQ: MCP Alternatives & Advanced Patterns](FAQ.md)** — Aggregators, sandboxing, self-optimization
 * **[MCP Critique: Sources & Commentary](mcp-critique-sources.md)** — Comprehensive collection of industry voices
 
