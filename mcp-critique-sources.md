@@ -80,6 +80,20 @@ CLI philosophy:
 
 ---
 
+### webctl (cosinusalpha)
+
+**Source:** [webctl README — Why CLI Instead of MCP?](https://github.com/cosinusalpha/webctl)
+
+On who controls context:
+
+> "MCP browser tools have a fundamental problem: **the server controls what enters your context**. With Playwright MCP, every response includes the full accessibility tree plus console messages. After a few page queries, your context window is full."
+
+> "CLI flips this around: **you control what enters context**."
+
+**Position:** Browser automation should use CLI with built-in filtering (`--interactive-only`, `--within`, pipes to grep/jq) instead of MCP servers that dump entire page trees into context.
+
+---
+
 ## From This Repository's Primary Sources
 
 * **Anthropic Engineering:** [Code Execution with MCP](https://www.anthropic.com/engineering/code-execution-with-mcp) ([archived](archived-resources/anthropic--code-execution-with-mcp.md))

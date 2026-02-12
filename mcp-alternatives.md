@@ -75,6 +75,40 @@ CLI wrapper providing Slack access that agents can script, filter, and audit
 
 ---
 
+### Browser Automation
+
+| MCP Server | CLI Alternative |
+|------------|-----------------|
+| Playwright MCP, browser MCP servers | [webctl](https://github.com/cosinusalpha/webctl) |
+
+CLI browser automation for AI agents and humans. Filters output before it enters context — the agent controls what it sees, not the server.
+
+
+**Resources:**
+
+* [GitHub Repository](https://github.com/cosinusalpha/webctl)
+
+**Why it wins:**
+
+> "MCP browser tools have a fundamental problem: the server controls what enters your context. With Playwright MCP, every response includes the full accessibility tree plus console messages. After a few page queries, your context window is full. CLI flips this around: you control what enters context.
+"
+> — webctl README
+
+**Examples:**
+
+```bash
+# Only buttons, links, inputs (skip full accessibility tree)
+webctl snapshot --interactive-only --limit 30
+# Scope to main content (skip nav, footer, ads)
+webctl snapshot --within "role=main"
+# Find specific elements via Unix pipes
+webctl snapshot | grep -i "submit"
+# Extract structured data with jq
+webctl --format jsonl snapshot | jq ".data.role"
+```
+
+---
+
 ## More Services (Help Wanted)
 
 We're tracking CLI alternatives for common MCP servers. See "Contribute" below.

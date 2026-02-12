@@ -1,0 +1,38 @@
+repo: github.com/cosinusalpha/webctl
+name: webctl
+service: Browser Automation
+replaces_mcp: Playwright MCP, browser MCP servers
+description: >
+  CLI browser automation for AI agents and humans.
+  Filters output before it enters context — the agent controls what it sees,
+  not the server.
+
+quote:
+  text: >
+    MCP browser tools have a fundamental problem: the server controls what
+    enters your context. With Playwright MCP, every response includes the full
+    accessibility tree plus console messages. After a few page queries, your
+    context window is full. CLI flips this around: you control what enters context.
+  source: webctl README
+  url: https://github.com/cosinusalpha/webctl
+
+resources:
+  - label: GitHub Repository
+    url: https://github.com/cosinusalpha/webctl
+
+tags:
+  - browser-automation
+  - web
+  - scraping
+
+maturity: stable
+
+examples:
+  - command: "webctl snapshot --interactive-only --limit 30"
+    description: Only buttons, links, inputs (skip full accessibility tree)
+  - command: 'webctl snapshot --within "role=main"'
+    description: Scope to main content (skip nav, footer, ads)
+  - command: 'webctl snapshot | grep -i "submit"'
+    description: Find specific elements via Unix pipes
+  - command: 'webctl --format jsonl snapshot | jq ".data.role"'
+    description: Extract structured data with jq

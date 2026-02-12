@@ -105,6 +105,11 @@ Not just "any CLI" — tools built for composability and agent workflows:
 > "Token budget matters: 13k tokens for tool definitions is prohibitive. Simplicity wins: 3-4 features beats 20+ for real workflows."
 > — Carlo Zottmann, Linearis ([archived](archived-resources/zottmann--linearis-linear-cli-built.md))
 
+**On Who Controls Context:**
+
+> "MCP browser tools have a fundamental problem: **the server controls what enters your context**. With Playwright MCP, every response includes the full accessibility tree plus console messages. After a few page queries, your context window is full. CLI flips this around: **you control what enters context**."
+> — [webctl](https://github.com/cosinusalpha/webctl)
+
 ---
 
 ## Further Reading
