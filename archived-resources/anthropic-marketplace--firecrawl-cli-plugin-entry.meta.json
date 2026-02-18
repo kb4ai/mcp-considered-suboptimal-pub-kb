@@ -1,0 +1,17 @@
+{
+  "title": "Anthropic Claude Plugins Marketplace - Firecrawl Entry (marketplace.json)",
+  "author": "Anthropic / Firecrawl team",
+  "date_published": "2025",
+  "date_archived": "2026-02-18",
+  "source_url": "https://github.com/anthropics/claude-plugins-official/blob/261ce4fba4f2c314c490302158909a32e5889c88/.claude-plugin/marketplace.json",
+  "permalink": "https://github.com/anthropics/claude-plugins-official/blob/261ce4fba4f2c314c490302158909a32e5889c88/.claude-plugin/marketplace.json#L643C1-L652C6",
+  "raw_url": "https://raw.githubusercontent.com/anthropics/claude-plugins-official/261ce4fba4f2c314c490302158909a32e5889c88/.claude-plugin/marketplace.json",
+  "repository": "anthropics/claude-plugins-official",
+  "commit": "261ce4fba4f2c314c490302158909a32e5889c88",
+  "file_path": ".claude-plugin/marketplace.json",
+  "lines": "643-652",
+  "key_insight": "Firecrawl's official listing in Anthropic's own Claude Code plugin marketplace uses source type 'url' pointing to a git repository that implements a CLI-based Skill integration. Despite Firecrawl also maintaining a separate MCP server (firecrawl-mcp-server), the marketplace entry deliberately uses the CLI/Skill approach. This is direct evidence from Anthropic's own curated registry that CLI over MCP is the preferred pattern for agent tool integration.",
+  "context": "The marketplace.json contains ~50 plugins. Firecrawl is the last entry. The source field specifies 'url' type with a git repo, not an MCP server configuration. The plugin installs a CLI skill, not an MCP server.",
+  "extraction_method": "WebFetch from GitHub blob and raw URL",
+  "tags": ["marketplace", "claude-plugins", "anthropic", "firecrawl", "cli-skill", "not-mcp", "evidence"]
+}

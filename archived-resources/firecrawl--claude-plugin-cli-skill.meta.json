@@ -1,0 +1,27 @@
+{
+  "title": "Firecrawl Claude Plugin - CLI Skill Implementation (README)",
+  "author": "Firecrawl / mendableai",
+  "date_published": "2025",
+  "date_archived": "2026-02-18",
+  "source_url": "https://github.com/firecrawl/firecrawl-claude-plugin",
+  "permalink": "https://github.com/firecrawl/firecrawl-claude-plugin/blob/684b975c8cc6bd0fcfa96f787900bf87fffeef57/README.md",
+  "raw_url": "https://raw.githubusercontent.com/firecrawl/firecrawl-claude-plugin/684b975c8cc6bd0fcfa96f787900bf87fffeef57/README.md",
+  "repository": "firecrawl/firecrawl-claude-plugin",
+  "commit": "684b975c8cc6bd0fcfa96f787900bf87fffeef57",
+  "file_path": "README.md",
+  "key_insight": "The Firecrawl Claude Code plugin is explicitly built as a Skill+CLI integration, NOT an MCP server integration. Installation requires 'npm install -g firecrawl-cli' followed by authentication. The plugin wraps the firecrawl CLI binary as a Claude Code skill. Results are saved to .firecrawl/ directory to preserve context window. This is a deliberate architectural choice: Firecrawl already had a working MCP server but created a separate CLI-based plugin for the official Claude Code marketplace.",
+  "architecture": "Skill + CLI tool (firecrawl-cli npm package)",
+  "install_method": "npm install -g firecrawl-cli",
+  "key_commands": [
+    "firecrawl search <query>",
+    "firecrawl scrape <url>",
+    "firecrawl map <url>",
+    "firecrawl crawl <url>",
+    "firecrawl browser launch/execute/list/close",
+    "firecrawl --status"
+  ],
+  "output_dir": ".firecrawl/",
+  "license": "AGPL-3.0",
+  "extraction_method": "WebFetch from GitHub blob and raw URL",
+  "tags": ["firecrawl", "cli-skill", "claude-plugin", "not-mcp", "skill-architecture", "evidence"]
+}
