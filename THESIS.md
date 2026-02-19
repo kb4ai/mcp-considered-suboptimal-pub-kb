@@ -67,6 +67,8 @@ Not just "any CLI" — tools designed for composability:
 
 9. **Executors minimize latency** — Keep slow actors (LLM inference) out of fast loops (API chaining, filtering); a 4-call MCP workflow becomes 1 executor call with 97% fewer tokens ([details](time-travel-latency.md))
 
+10. **The market is converging on CLI** — Even when MCP is available, practitioners choose CLI. Firecrawl maintains both MCP and CLI; for their [Claude Code marketplace plugin](https://github.com/anthropics/claude-plugins-official/blob/261ce4fba4f2c314c490302158909a32e5889c88/.claude-plugin/marketplace.json#L643C1-L652C6) (in Anthropic's own repo), they built a [Skill+CLI integration](https://github.com/firecrawl/firecrawl-claude-plugin/blob/684b975c8cc6bd0fcfa96f787900bf87fffeef57/README.md), not MCP
+
 ---
 
 ## Further Reading

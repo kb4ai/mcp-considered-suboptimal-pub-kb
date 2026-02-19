@@ -187,6 +187,18 @@ Use your Bash tool to call these CLIs:
 - `curl` + [`jq`][jq] for REST APIs
 ```
 
+### Real-World Validation: The Claude Code Marketplace
+
+This Skill+CLI pattern is not theoretical. Anthropic's own [Claude Code plugin marketplace](https://github.com/anthropics/claude-plugins-official/blob/261ce4fba4f2c314c490302158909a32e5889c88/.claude-plugin/marketplace.json#L643C1-L652C6) hosts plugins that follow this exact architecture. Firecrawl — a well-known web scraping service with an existing MCP server — [chose to build a Skill+CLI plugin](https://github.com/firecrawl/firecrawl-claude-plugin/blob/684b975c8cc6bd0fcfa96f787900bf87fffeef57/README.md) instead:
+
+```
+Plugin = SKILL.md (instructions for the agent)
+       + CLI tool (firecrawl CLI, called via Bash)
+       + install script (setup)
+```
+
+When service providers who maintain both MCP and CLI choose CLI for agent integration, that's the market speaking.
+
 ---
 
 ## The Privacy Bonus

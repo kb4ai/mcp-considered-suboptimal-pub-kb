@@ -16,6 +16,8 @@ Their solution? Have agents write code instead of calling MCP tools directly.
 
 Source: [Code Execution with MCP](https://www.anthropic.com/engineering/code-execution-with-mcp) (archived: [local copy](archived-resources/anthropic--code-execution-with-mcp.md))
 
+**And it doesn't stop there.** Anthropic's own [Claude Code plugin marketplace](https://github.com/anthropics/claude-plugins-official/blob/261ce4fba4f2c314c490302158909a32e5889c88/.claude-plugin/marketplace.json#L643C1-L652C6) hosts Firecrawl's integration — which wraps a **CLI tool via a Skill**, not an MCP server. Firecrawl maintains [both MCP and CLI](https://github.com/firecrawl/.github/blob/eac6d8b43e11e1cc401a48e0e038a3c60fb53db9/profile/README.md) options. They chose CLI. ([details](ramblings/2026-02-18--firecrawl-claude-marketplace-cli-over-mcp.md))
+
 ---
 
 ## The Core Insight
@@ -105,6 +107,11 @@ Not just "any CLI" — tools built for composability and agent workflows:
 > "Token budget matters: 13k tokens for tool definitions is prohibitive. Simplicity wins: 3-4 features beats 20+ for real workflows."
 > — Carlo Zottmann, Linearis ([archived](archived-resources/zottmann--linearis-linear-cli-built.md))
 
+**On Choosing CLI Over MCP (from Anthropic's own marketplace):**
+
+> "This plugin adds the Firecrawl CLI as a skill to Claude Code"
+> — [Firecrawl Claude Plugin](https://github.com/firecrawl/firecrawl-claude-plugin/blob/684b975c8cc6bd0fcfa96f787900bf87fffeef57/README.md) (hosted in [Anthropic's official marketplace](https://github.com/anthropics/claude-plugins-official/blob/261ce4fba4f2c314c490302158909a32e5889c88/.claude-plugin/marketplace.json#L643C1-L652C6) — despite Firecrawl having an MCP server available)
+
 **On Who Controls Context:**
 
 > "MCP browser tools have a fundamental problem: **the server controls what enters your context**. With Playwright MCP, every response includes the full accessibility tree plus console messages. After a few page queries, your context window is full. CLI flips this around: **you control what enters context**."
@@ -120,6 +127,7 @@ Not just "any CLI" — tools built for composability and agent workflows:
 * **[MCP Alternatives](mcp-alternatives.md)** — CLI tools that replace MCP servers (contribute yours!)
 * **[FAQ: MCP Alternatives & Advanced Patterns](FAQ.md)** — Aggregators, sandboxing, self-optimization
 * **[MCP Critique: Sources & Commentary](mcp-critique-sources.md)** — Comprehensive collection of industry voices
+* **[Firecrawl: CLI Over MCP in Anthropic's Marketplace](ramblings/2026-02-18--firecrawl-claude-marketplace-cli-over-mcp.md)** — Case study with permalinks
 
 ---
 
@@ -132,6 +140,7 @@ Not just "any CLI" — tools built for composability and agent workflows:
 5. **Executors minimize latency** — Keep LLMs out of fast loops ([details](time-travel-latency.md))
 6. **Industrialization needs stewardship** — Generic tools, custom composition
 7. **Software engineering patterns apply** — APIs > Protocols
+8. **The market converges on CLI** — Even in Anthropic's own marketplace, CLI plugins over MCP ([evidence](ramblings/2026-02-18--firecrawl-claude-marketplace-cli-over-mcp.md))
 
 ---
 
@@ -152,6 +161,7 @@ The future is not bigger context windows. It's smarter tool design.
 ## Primary Sources
 
 * **Anthropic Engineering Blog:** [Code Execution with MCP](https://www.anthropic.com/engineering/code-execution-with-mcp) (Nov 2025) ([archived](archived-resources/anthropic--code-execution-with-mcp.md))
+* **Anthropic Marketplace:** [Firecrawl CLI plugin](https://github.com/anthropics/claude-plugins-official/blob/261ce4fba4f2c314c490302158909a32e5889c88/.claude-plugin/marketplace.json#L643C1-L652C6) — Skill+CLI chosen over MCP in Anthropic's own repo (Feb 2026) ([analysis](ramblings/2026-02-18--firecrawl-claude-marketplace-cli-over-mcp.md))
 * **Theo t3.gg:** [Anthropic admits they were wrong about MCP](https://www.youtube.com/watch?v=1piFEKA9XL0) (Nov 2025) ([archived](archived-resources/theo-t3gg--anthropic-admits-mcp-sucks--transcript.md))
 * **HackerNoon:** [98% of MCP Servers Got This Wrong](https://hackernoon.com/98percent-of-mcp-servers-got-this-wrong-the-reason-why-the-protocol-never-worked) (Nov 2025) ([archived](archived-resources/hackernoon--98-percent-mcp-servers-wrong.md))
 * **Chris Loy:** [The Rise of Industrial Software](https://chrisloy.dev/post/2025/12/30/the-rise-of-industrial-software) (Dec 2025) ([archived](archived-resources/chrisloy--rise-of-industrial-software.md))

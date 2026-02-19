@@ -94,6 +94,18 @@ On who controls context:
 
 ---
 
+### Firecrawl (Claude Code Plugin Marketplace)
+
+**Source:** [Anthropic's official marketplace](https://github.com/anthropics/claude-plugins-official/blob/261ce4fba4f2c314c490302158909a32e5889c88/.claude-plugin/marketplace.json#L643C1-L652C6) → [firecrawl-claude-plugin](https://github.com/firecrawl/firecrawl-claude-plugin/blob/684b975c8cc6bd0fcfa96f787900bf87fffeef57/README.md)
+
+The finding: Firecrawl maintains **both** an [MCP server](https://github.com/firecrawl/.github/blob/eac6d8b43e11e1cc401a48e0e038a3c60fb53db9/profile/README.md) and a [CLI tool](https://github.com/firecrawl/cli). For their Claude Code plugin — hosted in **Anthropic's own official marketplace repo** — they chose **Skill + CLI**, not MCP.
+
+> "This plugin adds the Firecrawl CLI as a skill to Claude Code"
+
+**Position:** Even service providers with MCP servers prefer CLI for agent tooling when both options are available. ([detailed analysis](ramblings/2026-02-18--firecrawl-claude-marketplace-cli-over-mcp.md))
+
+---
+
 ## From This Repository's Primary Sources
 
 * **Anthropic Engineering:** [Code Execution with MCP](https://www.anthropic.com/engineering/code-execution-with-mcp) ([archived](archived-resources/anthropic--code-execution-with-mcp.md))
