@@ -1,0 +1,44 @@
+{
+  "url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/programmatic-tool-calling",
+  "title": "Programmatic tool calling - Claude API Docs",
+  "author": "Anthropic Developer Platform team",
+  "platform": "Anthropic Developer Platform",
+  "archive_date": "2026-02-20",
+  "archived_by": "Claude Code (Sonnet 4.6)",
+  "content_type": "official-documentation",
+  "fetch_status": "full text extracted via WebFetch",
+  "topics": [
+    "programmatic-tool-calling",
+    "allowed_callers",
+    "caller-field",
+    "code-execution",
+    "container-lifecycle",
+    "tool-use",
+    "advanced-tool-use",
+    "batch-processing",
+    "token-efficiency",
+    "anthropic-api"
+  ],
+  "key_concepts": [
+    "allowed_callers field to designate code-execution-callable tools",
+    "caller field in responses indicating invocation mode",
+    "Container lifecycle and reuse across requests",
+    "Intermediate results excluded from Claude's context window",
+    "Batch processing, early termination, conditional logic patterns",
+    "Alternative implementations: client-side direct, self-managed sandbox, Anthropic-managed"
+  ],
+  "supported_models": [
+    "claude-opus-4-6",
+    "claude-sonnet-4-6",
+    "claude-sonnet-4-5-20250929",
+    "claude-opus-4-5-20251101"
+  ],
+  "tool_version": "code_execution_20250825",
+  "known_exclusions": [
+    "Web search tool",
+    "Web fetch tool",
+    "MCP connector tools",
+    "Tools with strict:true (structured outputs)"
+  ],
+  "content_summary": "Complete official documentation for Anthropic's programmatic tool calling feature, covering configuration via allowed_callers field, full request/response workflow with code examples in Python/TypeScript/Shell, advanced patterns (batch processing, early termination, conditional tool selection, data filtering), error handling, constraints, token efficiency details, and alternative implementation approaches."
+}

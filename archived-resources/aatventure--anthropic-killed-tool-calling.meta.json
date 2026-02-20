@@ -1,0 +1,79 @@
+{
+  "url": "https://aatventure.news/posts/prompt-engineering-anthropic-just-killed-tool-calling",
+  "title": "Prompt Engineering | Anthropic Just Killed Tool Calling",
+  "author": "prompt-engineering (aatventure.news)",
+  "publication_date": "~2026-02-18",
+  "platform": "aatventure.news",
+  "archive_date": "2026-02-20",
+  "archived_by": "Claude Code (Sonnet 4.6)",
+  "content_type": "article",
+  "fetch_notes": "Primary URL (aatventure.news) returned JavaScript-rendered content with minimal extractable text. Article body confirmed as JavaScript-gated. Content reconstructed from: (1) jina.ai reader extract of source URL, (2) Anthropic engineering blog primary source, (3) ai505.com mirror site, (4) Victor Dibia newsletter article citing same benchmarks and events, (5) web search synthesis.",
+  "topics": [
+    "programmatic-tool-calling",
+    "tool-calling",
+    "json-tool-calling",
+    "claude-sonnet-4-6",
+    "code-execution",
+    "token-efficiency",
+    "agentic-ai",
+    "anthropic",
+    "mcp",
+    "cloudflare"
+  ],
+  "key_statistics": {
+    "token_reduction_headline": "up to 98%",
+    "token_reduction_anthropic_measured": "37% (43,588 to 27,297 tokens) in multi-tool workflow",
+    "token_reduction_cloudflare_measured": "98.7% (150,000 to 2,000 tokens)",
+    "accuracy_improvement_tool_search_opus4": "49% to 74%",
+    "accuracy_improvement_tool_search_opus45": "79.5% to 88.1%",
+    "accuracy_improvement_tool_use_examples": "72% to 90%",
+    "codeact_paper_success_rate_advantage": "up to 20% over JSON tool calling across 17 LLMs",
+    "codeact_paper_step_reduction": "30% fewer steps on average"
+  },
+  "related_sources": [
+    {
+      "title": "Introducing Advanced Tool Use on the Claude Developer Platform",
+      "url": "https://www.anthropic.com/engineering/advanced-tool-use",
+      "author": "Bin Wu et al.",
+      "date": "2025-11-24",
+      "source": "Anthropic Engineering Blog"
+    },
+    {
+      "title": "Programmatic tool calling - Claude API Docs",
+      "url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/programmatic-tool-calling",
+      "source": "Anthropic Developer Platform"
+    },
+    {
+      "title": "Anthropic Just Killed Traditional Tool Calling with Sonnet 4.6 - Here's What Replaces It",
+      "url": "https://ai505.com/anthropic-just-killed-traditional-tool-calling-here-s-what-replaces-it/",
+      "source": "ai505.com (mirror/coverage)"
+    },
+    {
+      "title": "The Arc of Agent Action from Code to Tools and Back to Code",
+      "url": "https://newsletter.victordibia.com/p/the-arc-of-agent-action-from-code",
+      "author": "Victor Dibia, PhD",
+      "date": "2026-01-05",
+      "source": "Victor Dibia Newsletter"
+    },
+    {
+      "title": "Your AI agent wastes 95% of its brain on tools. Anthropic just showed the fix.",
+      "url": "https://medium.com/genaius/your-ai-agent-wastes-95-of-its-brain-on-tools-anthropic-just-showed-the-fix-96fbe597136b",
+      "author": "Namish Saxena",
+      "source": "Medium / GenAIUs"
+    },
+    {
+      "title": "CodeAct: Executable Code Actions Elicit Better LLM Agents",
+      "url": "https://arxiv.org/abs/2402.01030",
+      "source": "ICML 2024 Paper (Wang et al.)"
+    }
+  ],
+  "extraction_methods": [
+    "WebFetch tool (primary URL - JS-gated, minimal content)",
+    "jina.ai reader (r.jina.ai proxy - partial summary only)",
+    "WebSearch synthesis",
+    "WebFetch Anthropic engineering blog (primary source)",
+    "WebFetch platform.claude.com docs (full technical documentation)",
+    "WebFetch Victor Dibia newsletter (independent analysis citing same benchmarks)"
+  ],
+  "content_summary": "Article covering Anthropic's introduction of 'programmatic tool calling' (code mode) with Claude Sonnet 4.6, claiming it replaces traditional JSON-based tool calling. Cites token usage reduction of up to 98% and accuracy improvements. Companies like Cloudflare and Anthropic already implementing. Author frames as potentially the most important under-the-radar upgrade of the year for AI agent builders."
+}

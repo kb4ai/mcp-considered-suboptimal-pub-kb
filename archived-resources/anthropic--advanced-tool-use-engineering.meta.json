@@ -1,0 +1,42 @@
+{
+  "url": "https://www.anthropic.com/engineering/advanced-tool-use",
+  "title": "Introducing Advanced Tool Use on the Claude Developer Platform",
+  "author": "Bin Wu",
+  "contributors": ["Adam Jones", "Artur Renault", "Henry Tay", "Jake Noble", "Nathan McCandlish", "Noah Picard", "Sam Jiang", "Claude Developer Platform team"],
+  "publication_date": "2025-11-24",
+  "platform": "Anthropic Engineering Blog",
+  "archive_date": "2026-02-20",
+  "archived_by": "Claude Code (Sonnet 4.6)",
+  "content_type": "engineering-blog",
+  "fetch_status": "full text extracted via WebFetch",
+  "topics": [
+    "programmatic-tool-calling",
+    "tool-search-tool",
+    "tool-use-examples",
+    "advanced-tool-use",
+    "claude-sonnet-4-5",
+    "claude-opus-4",
+    "token-efficiency",
+    "agentic-ai",
+    "code-execution",
+    "anthropic"
+  ],
+  "key_statistics": {
+    "token_reduction_programmatic_tool_calling": "37% (43,588 to 27,297 tokens)",
+    "inference_passes_eliminated": "19+ for 20+ tool calls",
+    "accuracy_knowledge_retrieval_improvement": "25.6% to 28.5%",
+    "accuracy_GIA_benchmark_improvement": "46.5% to 51.2%",
+    "tool_search_token_reduction": "~85% (72K tokens to ~500 tokens initial)",
+    "tool_search_accuracy_opus4": "49% to 74%",
+    "tool_search_accuracy_opus45": "79.5% to 88.1%",
+    "tool_use_examples_accuracy": "72% to 90%",
+    "five_server_upfront_tokens": "~55K",
+    "anthropic_internal_system_observed_tokens": "134K"
+  },
+  "three_features_announced": [
+    "Tool Search Tool - on-demand tool discovery without loading all definitions upfront",
+    "Programmatic Tool Calling - invoke tools via code execution reducing context pollution and inference overhead",
+    "Tool Use Examples - concrete usage examples beyond JSON schemas improving accuracy"
+  ],
+  "content_summary": "Anthropic engineering blog announcing three beta features for advanced tool use: Tool Search Tool enabling on-demand discovery of tools to cut 85% of tool definition tokens, Programmatic Tool Calling enabling code-based tool invocation for 37% token reduction and improved accuracy, and Tool Use Examples providing realistic usage patterns to improve complex parameter handling accuracy from 72% to 90%."
+}
