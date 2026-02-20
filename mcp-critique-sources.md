@@ -106,6 +106,44 @@ The finding: Firecrawl maintains **both** an [MCP server](https://github.com/fir
 
 ---
 
+## Anthropic's Own Architectural Shift (February 2026)
+
+### Programmatic Tool Calling Goes GA — Sonnet 4.6
+
+**Source:** [Introducing Claude Sonnet 4.6](https://www.anthropic.com/news/claude-sonnet-4-6) ([archived](archived-resources/anthropic--sonnet-4-6-announcement.md))
+**Source:** [Advanced Tool Use Engineering Blog](https://www.anthropic.com/engineering/advanced-tool-use) ([archived](archived-resources/anthropic--advanced-tool-use-engineering.md))
+**Source:** [Programmatic Tool Calling Docs](https://platform.claude.com/docs/en/agents-and-tools/tool-use/programmatic-tool-calling) ([archived](archived-resources/anthropic-docs--programmatic-tool-calling.md))
+
+With the Sonnet 4.6 release (Feb 17, 2026), Anthropic moved programmatic tool calling from beta to GA. Claude now writes Python code to invoke tools in sandboxed containers instead of emitting JSON function calls. Intermediate results stay in the sandbox; only final output enters context.
+
+Key results:
+
+| Feature | Token Reduction | Accuracy Gain |
+|---------|----------------|---------------|
+| Programmatic tool calling | 37% (multi-tool workflows) | +5% on GIA benchmarks |
+| Tool Search Tool | 85% (tool definitions) | Opus 4: 49% → 74% |
+| Dynamic web search filtering | 24% (input tokens) | BrowserComp: +13 pts (Sonnet), +16 pts (Opus) |
+| Extreme case (Cloudflare) | 98.7% (150K → 2K) | — |
+
+From official docs:
+
+> "Claude's training includes extensive exposure to code, making it effective at reasoning through and chaining function calls."
+
+> "Tool results from programmatic invocations do not count toward your input/output token usage."
+
+**Position:** MCP's creator is building layered escape hatches from MCP's own context bloat. Code execution is now the recommended path for multi-tool workflows.
+
+### Third-Party Coverage of the Shift
+
+* **Prompt Engineering (YouTube):** [Anthropic Just Killed Tool Calling](https://www.youtube.com/watch?v=8dVCSPXG6Mw) ([transcript](archived-resources/prompt-engineering-yt--anthropic-killed-tool-calling--transcript.md)) — 42K+ views, Feb 18, 2026. "LLMs are specifically trained with code. They are not trained for tool calling."
+* **ai505.com:** [Anthropic Just Killed Traditional Tool Calling](https://ai505.com/anthropic-just-killed-traditional-tool-calling-here-s-what-replaces-it/) ([archived](archived-resources/ai505--anthropic-killed-traditional-tool-calling.md)) — "Anthropic didn't just ship a feature. They graduated a philosophy."
+* **aatventure.news:** [Prompt Engineering | Anthropic Just Killed Tool Calling](https://aatventure.news/posts/prompt-engineering-anthropic-just-killed-tool-calling) ([archived](archived-resources/aatventure--anthropic-killed-tool-calling.md)) — Detailed technical analysis with CodeAct paper references
+* **Recapio:** [Digest of Prompt Engineering video](https://recapio.com/digest/anthropic-just-killed-tool-calling-by-prompt-engineering) ([archived](archived-resources/recapio--prompt-engineering--anthropic-killed-tool-calling.md))
+
+**Analysis:** [Rambling: Anthropic Graduates Programmatic Tool Calling — Thesis Validation](ramblings/2026-02-20--anthropic-graduates-programmatic-tool-calling-thesis-validation.md)
+
+---
+
 ## From This Repository's Primary Sources
 
 * **Anthropic Engineering:** [Code Execution with MCP](https://www.anthropic.com/engineering/code-execution-with-mcp) ([archived](archived-resources/anthropic--code-execution-with-mcp.md))
