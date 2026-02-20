@@ -1,0 +1,55 @@
+{
+  "url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/programmatic-tool-calling",
+  "title": "Programmatic tool calling - Claude API Docs",
+  "author": "Anthropic",
+  "source": "Anthropic Developer Platform (platform.claude.com)",
+  "content_type": "official API documentation",
+  "access_date": "2026-02-20",
+  "archived_by": "Claude Code (claude-sonnet-4-6)",
+  "retrieval_method": "WebFetch tool (direct fetch succeeded - docs are publicly accessible HTML)",
+  "topics": [
+    "programmatic-tool-calling",
+    "code-execution-tool",
+    "allowed_callers",
+    "sandboxed-execution",
+    "token-efficiency",
+    "claude-opus-4-6",
+    "claude-sonnet-4-6",
+    "claude-sonnet-4-5",
+    "claude-opus-4-5",
+    "container-lifecycle",
+    "agentic-coding"
+  ],
+  "model_compatibility": [
+    "claude-opus-4-6",
+    "claude-sonnet-4-6",
+    "claude-sonnet-4-5-20250929",
+    "claude-opus-4-5-20251101"
+  ],
+  "tool_version_required": "code_execution_20250825",
+  "key_technical_facts": {
+    "availability": "Claude API and Microsoft Foundry",
+    "requires": "code_execution tool enabled",
+    "zdr_coverage": false,
+    "container_expiry_minutes": 4.5,
+    "allowed_callers_values": ["direct", "code_execution_20250825"],
+    "token_efficiency_claim": "Tool results from programmatic calls not added to Claude context - only final code output",
+    "calling_10_tools_programmatically": "saves ~10x tokens vs calling each tool directly",
+    "incompatible_with": [
+      "structured outputs (strict: true)",
+      "tool_choice forcing programmatic calling",
+      "disable_parallel_tool_use: true"
+    ],
+    "tools_not_yet_callable_programmatically": [
+      "web search",
+      "web fetch",
+      "MCP connector tools"
+    ]
+  },
+  "notable_patterns": [
+    "Batch processing with loops - reduces model round-trips from N to 1",
+    "Early termination - stop processing when success criteria met",
+    "Conditional tool selection based on intermediate results",
+    "Data filtering - filter tool outputs before returning to context"
+  ]
+}

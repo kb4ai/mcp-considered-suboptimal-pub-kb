@@ -1,0 +1,67 @@
+{
+  "url": "https://recapio.com/digest/anthropic-just-killed-tool-calling-by-prompt-engineering",
+  "page_title": "Anthropic Just Killed Tool Calling - Transcript, Chat, and Summary with AI",
+  "platform": "Recapio (recapio.com) - AI-powered YouTube transcript and summarization service",
+  "source_type": "AI-generated digest/summary of a YouTube video",
+  "source_video": {
+    "title": "Anthropic Just Killed Tool Calling",
+    "channel": "Prompt Engineering",
+    "channel_url": "https://www.youtube.com/channel/UCDq7SjbgRKty5TgGafW8Clg",
+    "video_id": "8dVCSPXG6Mw",
+    "video_url": "https://www.youtube.com/watch?v=8dVCSPXG6Mw",
+    "upload_date": "2026-02-18",
+    "duration_seconds": 820,
+    "duration_human": "13 minutes 40 seconds"
+  },
+  "recapio_page_dates": {
+    "published": "2026-02-18T13:45:00Z",
+    "last_modified": "2026-02-18"
+  },
+  "access_date": "2026-02-20",
+  "archived_by": "Claude Code (claude-sonnet-4-6)",
+  "retrieval_method": "WebFetch tool + metadata extraction from Recapio page structure",
+  "content_type": "AI-generated summary/digest of YouTube video",
+  "note": "Recapio is a summarization service. The page content returned by WebFetch is an AI-generated abstract of the YouTube video, NOT verbatim transcript. The substantive article content this video covers is best captured in the companion ai505--anthropic-killed-traditional-tool-calling.md file, which represents a text article on the same topic with full verbatim text.",
+  "related_primary_sources": [
+    {
+      "title": "Anthropic Just Killed Traditional Tool Calling with Sonnet 4.6",
+      "url": "https://ai505.com/anthropic-just-killed-traditional-tool-calling-here-s-what-replaces-it/",
+      "type": "full text article on same topic",
+      "date": "2026-02-18",
+      "archive_file": "ai505--anthropic-killed-traditional-tool-calling.md"
+    },
+    {
+      "title": "Introducing Advanced Tool Use on the Claude Developer Platform",
+      "url": "https://www.anthropic.com/engineering/advanced-tool-use",
+      "type": "primary source - Anthropic Engineering Blog",
+      "date": "2025-11-24"
+    },
+    {
+      "title": "Programmatic tool calling - Claude API Docs",
+      "url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/programmatic-tool-calling",
+      "type": "primary source - Anthropic official documentation"
+    }
+  ],
+  "topics": [
+    "programmatic-tool-calling",
+    "tool-calling",
+    "json-tool-calling-obsolescence",
+    "claude-sonnet-4-6",
+    "code-execution-sandbox",
+    "token-efficiency",
+    "context-window-management",
+    "agentic-ai",
+    "anthropic",
+    "mcp",
+    "cloudflare-code-mode"
+  ],
+  "key_claims_from_digest": [
+    "Anthropic released programmatic tool calling out of beta",
+    "Agents write code to invoke tools within a sandbox instead of JSON tool calls",
+    "Tool definitions and input/outputs pollute the context window with traditional approach",
+    "LLMs are primarily trained on code, making programmatic invocation more natural",
+    "Cloudflare's research showed savings of 30-80% on tokens",
+    "Anthropic's web search tool uses dynamic filtering to inject only relevant info into context",
+    "Token reduction is not guaranteed - depends on filtering code complexity"
+  ]
+}

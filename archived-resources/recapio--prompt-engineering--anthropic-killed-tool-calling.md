@@ -1,16 +1,75 @@
 ---
-source_url: https://ai505.com/anthropic-just-killed-traditional-tool-calling-here-s-what-replaces-it/
+source_url: https://recapio.com/digest/anthropic-just-killed-tool-calling-by-prompt-engineering
 access_date: 2026-02-20
-article_date: 2026-02-18
-title: "Anthropic Just Killed Traditional Tool Calling with Sonnet 4.6- Here's What Replaces It"
-source_site: ai505.com
-retrieval_method: "jina.ai reader (r.jina.ai) via WebFetch tool"
-content_status: "full verbatim text"
+page_title: "Anthropic Just Killed Tool Calling - Transcript, Chat, and Summary with AI"
+platform: "Recapio (AI-powered YouTube summarization service)"
+source_video_url: https://www.youtube.com/watch?v=8dVCSPXG6Mw
+source_video_channel: "Prompt Engineering"
+source_video_upload_date: 2026-02-18
+source_video_duration: "13 minutes 40 seconds"
+content_type: "AI-generated digest of YouTube video"
 ---
 
-# Anthropic Just Killed Traditional Tool Calling with Sonnet 4.6- Here's What Replaces It
+# Anthropic Just Killed Tool Calling
 
-**Published:** February 18, 2026
+**Platform:** Recapio (recapio.com) - AI-generated digest of YouTube video
+**Source Video:** "Anthropic Just Killed Tool Calling" by channel "Prompt Engineering"
+**YouTube Video ID:** 8dVCSPXG6Mw
+**YouTube URL:** https://www.youtube.com/watch?v=8dVCSPXG6Mw
+**Upload Date:** February 18, 2026
+**Duration:** 13 minutes 40 seconds
+**Recapio Page:** https://recapio.com/digest/anthropic-just-killed-tool-calling-by-prompt-engineering
+**Archived:** 2026-02-20
+
+---
+
+## Note on Content Type
+
+This Recapio page is an **AI-generated summary/digest** of a YouTube video, not a verbatim transcript. Recapio is a service that uses AI to summarize YouTube content. The summaries returned are abstracts, not the full original text.
+
+The content below represents the digest summary as extracted from the Recapio page. For the full verbatim article text covering the same topic, see:
+
+* `ai505--anthropic-killed-traditional-tool-calling.md` - Full text article from ai505.com (Feb 18, 2026)
+* `aatventure--anthropic-killed-tool-calling.md` - aatventure.news article on same subject
+
+---
+
+## Recapio Digest Summary
+
+### Main Innovation
+
+Anthropic has released programmatic tool calling out of beta, which allows AI agents to "write code to invoke tools within a sandbox, defining the order of invocation" rather than using traditional JSON-based tool calling formats.
+
+### Core Problem Solved
+
+The approach addresses the "context window problem," where tool definitions and outputs "pollute the context window with unnecessary information." By executing code in a sandbox environment, only filtered summaries are passed back, reducing token usage.
+
+### Why This Matters
+
+LLMs are "primarily trained on code," making programmatic invocation more natural than JSON formats they were never specifically designed for. Industry adoption is expected, given Anthropic's track record with technologies like Model Context Protocol.
+
+### Real-World Impact
+
+Cloudflare's research showed "savings of 30% to 80% on tokens" using this approach. However, token reduction is not guaranteed - it depends on how much code the model writes for filtering.
+
+### Dynamic Filtering Example
+
+Anthropic's new web search tool demonstrates this by having Claude "write and execute code to post-process search results, injecting only the relevant information into the context window."
+
+### Caveat on Token Costs
+
+Token savings are not guaranteed. The actual savings depend on "the amount of code the model needs to write to filter the context," meaning some implementations may see increased overhead despite improved output efficiency.
+
+### Practical Advice
+
+Users of Anthropic's search API see automatic benefits with no required changes, while developers should explore available documentation for implementation details.
+
+---
+
+## Source Article: Full Verbatim Text (ai505.com, same topic)
+
+The following is the complete verbatim text of the companion article by ai505.com (February 18, 2026), covering the same material as the YouTube video. Retrieved via jina.ai reader.
+
 **Source:** https://ai505.com/anthropic-just-killed-traditional-tool-calling-here-s-what-replaces-it/
 
 ---
@@ -21,7 +80,7 @@ Anthropic just moved its programmatic tool calling out of beta. And with it, the
 
 Here's what's actually happening – and why I think this becomes the new industry standard within 18 months.
 
-## The Context Window Problem Nobody Wants to Talk About
+### The Context Window Problem Nobody Wants to Talk About
 
 Every agentic AI company is quietly wrestling with the same crisis. The more capable your agent gets, the more it pollutes its own context window.
 
@@ -35,7 +94,7 @@ This problem got dramatically worse with MCP adoption. As we covered in our Clau
 
 Context engineering – the discipline of deciding _what_ information actually belongs in the context window – became a hot topic in 2025 precisely because this problem was getting out of hand. Programmatic tool calling is Anthropic's most direct answer to it yet.
 
-## What Programmatic Tool Calling Actually Does
+### What Programmatic Tool Calling Actually Does
 
 Here's the core insight: LLMs are trained on billions of lines of code. They are _not_ trained on JSON tool-calling schemas. Writing code is natural to them. Parsing synthetic JSON function signatures is not.
 
@@ -47,7 +106,7 @@ Think of it like the difference between a chef who shouts every ingredient reque
 
 The token savings are not theoretical. Anthropic's own testing showed a 37% token reduction in their November 2025 advanced tool use release. Cloudflare, which independently arrived at the same idea and published their "Code Mode" report in September 2025, showed 32% savings for simple tasks and 81% for complex batch operations. For extreme cases – like Anthropic's example of reducing a 150,000-token MCP interaction to 2,000 tokens – the savings are closer to 99%.
 
-## The Timeline: This Wasn't Just Anthropic's Idea
+### The Timeline: This Wasn't Just Anthropic's Idea
 
 I want to be precise about the history here, because the narrative that "Anthropic invented this" isn't quite right – and understanding the convergence is actually more interesting.
 
@@ -63,7 +122,7 @@ The pattern here mirrors what happened with MCP itself. As we noted in our Claud
 
 Programmatic tool calling is next.
 
-## Dynamic Web Search Filtering: The Immediate Win
+### Dynamic Web Search Filtering: The Immediate Win
 
 The most tangible application of this in the Sonnet 4.6 release is dynamic web search filtering, and the benchmark numbers here deserve a closer look.
 
@@ -89,7 +148,7 @@ To put that 11% accuracy improvement in context – that's the kind of gain you'
 
 One important caveat Anthropic is honest about: token costs don't always go down. For Opus 4.6, the price-weighted token count actually _increased_ despite fewer input tokens, because Opus was writing significantly more code to do the filtering. More code generation = more output tokens = higher cost per token. The net efficiency depends on how complex the filtering task is and which model you're using. For Sonnet, the math works cleanly in your favor. For Opus, it's more nuanced.
 
-## What This Means If You're Building Agents
+### What This Means If You're Building Agents
 
 If you're using Anthropic's search API with data fetching enabled, you don't need to change anything. Dynamic filtering is now on by default. You get the accuracy improvements and token savings automatically.
 
@@ -128,7 +187,7 @@ This is also why the Tool Search Tool matters alongside programmatic tool callin
 
 Tool Search lets Claude query a tool library and retrieve only the definitions it actually needs – an 85% reduction in tool-definition tokens according to Anthropic's internal MCP evaluations. Combine that with programmatic execution, and you've addressed both the "loading" problem and the "execution" problem simultaneously.
 
-## The Broader Shift: Why Code Is the Right Abstraction
+### The Broader Shift: Why Code Is the Right Abstraction
 
 There's a deeper reason this works that goes beyond token counting.
 
@@ -144,7 +203,7 @@ This is the same insight that made GPT-5.3-Codex-Spark compelling when it launch
 
 Gemini has had code execution as part of its offering since Gemini 2.0. OpenAI's GPT-5.2 now supports 20+ tools behind its API with similar sandboxed execution patterns. The convergence is real. The question isn't whether programmatic tool calling becomes standard – it's how fast.
 
-## The Bottom Line
+### The Bottom Line
 
 Anthropic didn't just ship a feature. They graduated a philosophy.
 
@@ -158,7 +217,7 @@ The context window is still finite. But now, at least, you have a much better wa
 
 ---
 
-## FAQ
+## FAQ (from ai505.com article)
 
 ### What is programmatic tool calling in Claude Sonnet 4.6?
 
@@ -182,4 +241,22 @@ The Tool Search Tool lets Claude query a library of available tools and retrieve
 
 ---
 
-*Archived from ai505.com on 2026-02-20. Page is JavaScript-rendered; content retrieved via jina.ai reader (r.jina.ai). Full verbatim article text.*
+## Key Claims Summary Table
+
+| Claim | Evidence / Source |
+|---|---|
+| 37% token reduction in multi-tool workflows | Anthropic internal testing (November 2025 beta) |
+| 32-81% token savings depending on task complexity | Cloudflare Code Mode research (September 2025) |
+| Extreme case: 150,000 tokens reduced to 2,000 | Anthropic's MCP test case |
+| BrowserComp accuracy: 33.3% → 46.6% (Sonnet 4.6) | Sonnet 4.6 benchmark results |
+| BrowserComp accuracy: 45% → 61% (Opus 4.6) | Opus 4.6 benchmark results |
+| DeepSearchQA F1 score: 52.6% → 59.4% (Sonnet 4.6) | Sonnet 4.6 benchmark results |
+| 24% average input token reduction | Dual benchmark average |
+| Tool Search Tool reduces tool-definition tokens by 85% | Anthropic internal MCP evaluations |
+| GA release date for programmatic tool calling | February 17, 2026 (Sonnet 4.6 release) |
+| Cloudflare published "Code Mode" independently | September 2025 |
+| Anthropic beta release | November 2025 |
+
+---
+
+*Archived 2026-02-20. Source: Recapio digest at https://recapio.com/digest/anthropic-just-killed-tool-calling-by-prompt-engineering (AI summary of YouTube video "Anthropic Just Killed Tool Calling" by "Prompt Engineering" channel, Feb 18 2026). Full article content sourced from companion ai505.com article covering the same material.*
