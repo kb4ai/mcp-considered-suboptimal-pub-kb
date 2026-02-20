@@ -1,0 +1,49 @@
+{
+  "url": "https://ai505.com/anthropic-just-killed-traditional-tool-calling-here-s-what-replaces-it/",
+  "title": "Anthropic Just Killed Traditional Tool Calling with Sonnet 4.6",
+  "source": "ai505.com",
+  "archived_timestamp": "2026-02-20T00:00:00Z",
+  "article_date": "2026-02-18",
+  "retrieval_method": "jina.ai reader via WebFetch tool (r.jina.ai), direct WebFetch attempted but page is JS-rendered",
+  "content_type": "article",
+  "tags": [
+    "anthropic",
+    "tool-calling",
+    "programmatic-tool-calling",
+    "mcp",
+    "context-window",
+    "sonnet-4-6",
+    "code-execution",
+    "sandboxed-execution",
+    "token-reduction",
+    "agentic-coding"
+  ],
+  "key_topics": [
+    "Programmatic tool calling as GA feature in Claude Sonnet 4.6",
+    "Context window pollution from traditional tool calling",
+    "Code generation vs JSON schema tool invocation",
+    "Sandboxed execution keeping intermediate results out of context",
+    "Token reduction metrics: 37% average, up to 99% extreme cases",
+    "Web search accuracy improvements with dynamic filtering",
+    "Tool Search Tool reducing tool-definition tokens by 85%",
+    "Industry convergence: Cloudflare, OpenAI, Google similar patterns"
+  ],
+  "notable_claims": [
+    "37% token reduction in multi-tool workflows (Anthropic testing)",
+    "32-81% token savings depending on task complexity (Cloudflare)",
+    "Extreme case: 150,000 tokens reduced to 2,000",
+    "BrowserComp accuracy: 33% to 46.6% with Sonnet 4.6",
+    "DeepSearchQA F1 score: 52.6% to 59.4%",
+    "24% average input token reduction across benchmarks",
+    "Tool Search Tool reduces tool-definition tokens by 85%",
+    "LLMs trained on billions of lines of code, not JSON tool-calling schemas",
+    "Cloudflare independently published 'Code Mode' research in September 2025",
+    "Anthropic released advanced tool use platform in beta November 2025, GA February 2026"
+  ],
+  "referenced_resources": [
+    "Cloudflare Code Mode research (September 2025)",
+    "Anthropic advanced tool use platform",
+    "Gemini 2.0 code execution support",
+    "OpenAI GPT-5.2 sandboxed execution"
+  ]
+}
