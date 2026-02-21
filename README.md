@@ -16,6 +16,12 @@ Their solution? Have agents write code instead of calling MCP tools directly.
 
 Source: [Code Execution with MCP](https://www.anthropic.com/engineering/code-execution-with-mcp) (archived: [local copy](archived-resources/anthropic--code-execution-with-mcp.md))
 
+**Then in February 2026, they doubled down.** With the [Sonnet 4.6 release](https://www.anthropic.com/news/claude-sonnet-4-6) ([archived](archived-resources/anthropic--sonnet-4-6-announcement.md)), Anthropic moved **programmatic tool calling to GA**. Claude now writes Python code to invoke tools in sandboxed containers — intermediate results never enter context. They also shipped **dynamic web search filtering**: Claude writes code to filter search results *before* they reach the context window. The result?
+
+> **11% accuracy improvement and 24% fewer tokens — from cleaning the information diet alone, not changing the model.**
+
+BrowserComp: Sonnet 33% → 46%, Opus 45% → 61%. That's the kind of gain you'd expect from a model upgrade — achieved purely by better context management. ([analysis](ramblings/2026-02-20--anthropic-graduates-programmatic-tool-calling-thesis-validation.md))
+
 **And it doesn't stop there.** Anthropic's own [Claude Code plugin marketplace](https://github.com/anthropics/claude-plugins-official/blob/261ce4fba4f2c314c490302158909a32e5889c88/.claude-plugin/marketplace.json#L643C1-L652C6) hosts Firecrawl's integration — which wraps a **CLI tool via a Skill**, not an MCP server. Firecrawl maintains [both MCP and CLI](https://github.com/firecrawl/.github/blob/eac6d8b43e11e1cc401a48e0e038a3c60fb53db9/profile/README.md) options. They chose CLI. ([details](ramblings/2026-02-18--firecrawl-claude-marketplace-cli-over-mcp.md))
 
 ---
@@ -78,6 +84,9 @@ Not just "any CLI" — tools built for composability and agent workflows:
 | Metric | Value | Source |
 |--------|-------|--------|
 | Token reduction (code exec vs MCP) | **98.7%** | Anthropic |
+| Accuracy gain from context diet alone | **+11%** | Anthropic (Sonnet 4.6 dynamic filtering) |
+| Tool definition token reduction | **85%** | Anthropic (Tool Search Tool) |
+| Multi-tool workflow token reduction | **37%** | Anthropic (Programmatic Tool Calling) |
 | MCP servers with production features | **~2%** | HackerNoon |
 | Recommended max tools per agent | **3-5** | Industry consensus |
 | Linear MCP server token cost | **~13,000** | Linearis author |
@@ -112,6 +121,14 @@ Not just "any CLI" — tools built for composability and agent workflows:
 > "This plugin adds the Firecrawl CLI as a skill to Claude Code"
 > — [Firecrawl Claude Plugin](https://github.com/firecrawl/firecrawl-claude-plugin/blob/684b975c8cc6bd0fcfa96f787900bf87fffeef57/README.md) (hosted in [Anthropic's official marketplace](https://github.com/anthropics/claude-plugins-official/blob/261ce4fba4f2c314c490302158909a32e5889c88/.claude-plugin/marketplace.json#L643C1-L652C6) — despite Firecrawl having an MCP server available)
 
+**On Why Code Beats JSON — From MCP's Own Creator:**
+
+> "Claude's training includes extensive exposure to code, making it effective at reasoning through and chaining function calls. When tools are presented as callable functions within a code execution environment, Claude can leverage this strength."
+> — Anthropic, [Programmatic Tool Calling docs](https://platform.claude.com/docs/en/agents-and-tools/tool-use/programmatic-tool-calling) ([archived](archived-resources/anthropic-docs--programmatic-tool-calling.md))
+
+> "Tool results from programmatic invocations do not count toward your input/output token usage. Only the final code execution result and Claude's response count."
+> — Anthropic, same docs
+
 **On Who Controls Context:**
 
 > "MCP browser tools have a fundamental problem: **the server controls what enters your context**. With Playwright MCP, every response includes the full accessibility tree plus console messages. After a few page queries, your context window is full. CLI flips this around: **you control what enters context**."
@@ -127,6 +144,7 @@ Not just "any CLI" — tools built for composability and agent workflows:
 * **[MCP Alternatives](mcp-alternatives.md)** — CLI tools that replace MCP servers (contribute yours!)
 * **[FAQ: MCP Alternatives & Advanced Patterns](FAQ.md)** — Aggregators, sandboxing, self-optimization
 * **[MCP Critique: Sources & Commentary](mcp-critique-sources.md)** — Comprehensive collection of industry voices
+* **[Anthropic Graduates Programmatic Tool Calling](ramblings/2026-02-20--anthropic-graduates-programmatic-tool-calling-thesis-validation.md)** — Feb 2026 thesis validation analysis
 * **[Firecrawl: CLI Over MCP in Anthropic's Marketplace](ramblings/2026-02-18--firecrawl-claude-marketplace-cli-over-mcp.md)** — Case study with permalinks
 
 ---
@@ -135,12 +153,14 @@ Not just "any CLI" — tools built for composability and agent workflows:
 
 1. **MCP bloats context** — 500+ tool definitions make models dumber
 2. **Code execution works** — 98.7% token savings prove it
-3. **CLIs are self-documenting** — `--help` on demand, not upfront
-4. **Scripts are deterministic** — No hallucination in execution
-5. **Executors minimize latency** — Keep LLMs out of fast loops ([details](time-travel-latency.md))
-6. **Industrialization needs stewardship** — Generic tools, custom composition
-7. **Software engineering patterns apply** — APIs > Protocols
-8. **The market converges on CLI** — Even in Anthropic's own marketplace, CLI plugins over MCP ([evidence](ramblings/2026-02-18--firecrawl-claude-marketplace-cli-over-mcp.md))
+3. **Context diet improves accuracy** — 11% gain from filtering alone, no model change (Anthropic, Feb 2026)
+4. **CLIs are self-documenting** — `--help` on demand, not upfront
+5. **Scripts are deterministic** — No hallucination in execution
+6. **Executors minimize latency** — Keep LLMs out of fast loops ([details](time-travel-latency.md))
+7. **Industrialization needs stewardship** — Generic tools, custom composition
+8. **Software engineering patterns apply** — APIs > Protocols
+9. **The market converges on CLI** — Even in Anthropic's own marketplace, CLI plugins over MCP ([evidence](ramblings/2026-02-18--firecrawl-claude-marketplace-cli-over-mcp.md))
+10. **MCP's creator validates the thesis** — Anthropic ships programmatic tool calling, tool search, and dynamic filtering as GA escape hatches from MCP's own context bloat ([analysis](ramblings/2026-02-20--anthropic-graduates-programmatic-tool-calling-thesis-validation.md))
 
 ---
 
@@ -160,8 +180,18 @@ The future is not bigger context windows. It's smarter tool design.
 
 ## Primary Sources
 
-* **Anthropic Engineering Blog:** [Code Execution with MCP](https://www.anthropic.com/engineering/code-execution-with-mcp) (Nov 2025) ([archived](archived-resources/anthropic--code-execution-with-mcp.md))
+### Anthropic's Own Evolution (most significant)
+
+* **Anthropic:** [Introducing Claude Sonnet 4.6](https://www.anthropic.com/news/claude-sonnet-4-6) (Feb 2026) — Programmatic tool calling moved to GA ([archived](archived-resources/anthropic--sonnet-4-6-announcement.md))
+* **Anthropic:** [Programmatic Tool Calling docs](https://platform.claude.com/docs/en/agents-and-tools/tool-use/programmatic-tool-calling) — Official API documentation ([archived](archived-resources/anthropic-docs--programmatic-tool-calling.md))
+* **Anthropic:** [Advanced Tool Use](https://www.anthropic.com/engineering/advanced-tool-use) (Nov 2025) — Tool Search, Programmatic Calling, Examples ([archived](archived-resources/anthropic--advanced-tool-use-engineering.md))
+* **Anthropic:** [Code Execution with MCP](https://www.anthropic.com/engineering/code-execution-with-mcp) (Nov 2025) — Original 98.7% token reduction finding ([archived](archived-resources/anthropic--code-execution-with-mcp.md))
 * **Anthropic Marketplace:** [Firecrawl CLI plugin](https://github.com/anthropics/claude-plugins-official/blob/261ce4fba4f2c314c490302158909a32e5889c88/.claude-plugin/marketplace.json#L643C1-L652C6) — Skill+CLI chosen over MCP in Anthropic's own repo (Feb 2026) ([analysis](ramblings/2026-02-18--firecrawl-claude-marketplace-cli-over-mcp.md))
+
+### Industry Voices
+
+* **Prompt Engineering (YouTube):** [Anthropic Just Killed Tool Calling](https://www.youtube.com/watch?v=8dVCSPXG6Mw) (Feb 2026, 42K+ views) ([transcript](archived-resources/prompt-engineering-yt--anthropic-killed-tool-calling--transcript.md))
+* **ai505.com:** [Anthropic Just Killed Traditional Tool Calling](https://ai505.com/anthropic-just-killed-traditional-tool-calling-here-s-what-replaces-it/) (Feb 2026) ([archived](archived-resources/ai505--anthropic-killed-traditional-tool-calling.md))
 * **Theo t3.gg:** [Anthropic admits they were wrong about MCP](https://www.youtube.com/watch?v=1piFEKA9XL0) (Nov 2025) ([archived](archived-resources/theo-t3gg--anthropic-admits-mcp-sucks--transcript.md))
 * **HackerNoon:** [98% of MCP Servers Got This Wrong](https://hackernoon.com/98percent-of-mcp-servers-got-this-wrong-the-reason-why-the-protocol-never-worked) (Nov 2025) ([archived](archived-resources/hackernoon--98-percent-mcp-servers-wrong.md))
 * **Chris Loy:** [The Rise of Industrial Software](https://chrisloy.dev/post/2025/12/30/the-rise-of-industrial-software) (Dec 2025) ([archived](archived-resources/chrisloy--rise-of-industrial-software.md))
@@ -171,6 +201,6 @@ The future is not bigger context windows. It's smarter tool design.
 
 ---
 
-*Archived 2026-01-23. All sources preserved with full attribution in `archived-resources/`.*
+*Last updated 2026-02-21. All sources preserved with full attribution in `archived-resources/`.*
 
 [jq]: https://github.com/jqlang/jq

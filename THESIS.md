@@ -69,6 +69,8 @@ Not just "any CLI" — tools designed for composability:
 
 10. **The market is converging on CLI** — Even when MCP is available, practitioners choose CLI. Firecrawl maintains both MCP and CLI; for their [Claude Code marketplace plugin](https://github.com/anthropics/claude-plugins-official/blob/261ce4fba4f2c314c490302158909a32e5889c88/.claude-plugin/marketplace.json#L643C1-L652C6) (in Anthropic's own repo), they built a [Skill+CLI integration](https://github.com/firecrawl/firecrawl-claude-plugin/blob/684b975c8cc6bd0fcfa96f787900bf87fffeef57/README.md), not MCP
 
+11. **MCP's creator validates the thesis** — With [Sonnet 4.6](https://www.anthropic.com/news/claude-sonnet-4-6) (Feb 2026), Anthropic moved programmatic tool calling to GA: Claude writes code in sandboxed containers instead of JSON function calls. They also shipped Tool Search (85% fewer tool-definition tokens) and dynamic filtering (11% accuracy improvement from context diet alone). These are layered escape hatches from MCP's own context bloat. Anthropic's docs state: "Claude's training includes extensive exposure to code, making it effective at reasoning through and chaining function calls" — validating our thesis that LLMs are code-native, not protocol-native. ([analysis](ramblings/2026-02-20--anthropic-graduates-programmatic-tool-calling-thesis-validation.md))
+
 ---
 
 ## Further Reading

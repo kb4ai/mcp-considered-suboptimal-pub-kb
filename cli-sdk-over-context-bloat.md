@@ -20,6 +20,17 @@ LLMs are pattern-matching machines, not databases. Every token in context adds n
 
 Source: Anthropic Engineering Blog, November 2025
 
+**And now, Anthropic proved it improves quality too** (February 2026, [Sonnet 4.6 release](https://www.anthropic.com/news/claude-sonnet-4-6)):
+
+| Metric | Before | After | Change |
+|--------|--------|-------|--------|
+| BrowserComp (Sonnet 4.6) | 33.3% | 46.6% | **+13 pts** |
+| BrowserComp (Opus 4.6) | 45% | 61% | **+16 pts** |
+| DeepSearchQA F1 (Sonnet 4.6) | 52.6% | 59.4% | **+7 pts** |
+| Average input tokens | — | — | **-24%** |
+
+The model didn't change. The information diet got cleaner. That's the thesis in benchmark form.
+
 ---
 
 ## Why CLI/SDK Beats Context Bloat
@@ -187,6 +198,18 @@ Use your Bash tool to call these CLIs:
 - `curl` + [`jq`][jq] for REST APIs
 ```
 
+### Real-World Validation: Anthropic's Programmatic Tool Calling GA
+
+In February 2026, Anthropic moved [programmatic tool calling](https://platform.claude.com/docs/en/agents-and-tools/tool-use/programmatic-tool-calling) to general availability. Claude now writes Python code to invoke tools in sandboxed containers. Intermediate results stay in the sandbox; only the final output enters context.
+
+From Anthropic's own documentation:
+
+> "Claude's training includes extensive exposure to code, making it effective at reasoning through and chaining function calls. When tools are presented as callable functions within a code execution environment, Claude can leverage this strength."
+
+This is MCP's creator saying: **LLMs are code-native, not JSON-schema-native.** The natural interface for tool orchestration is code, not protocol definitions.
+
+Notable limitation: **MCP connector tools cannot currently be called programmatically.** The very protocol Anthropic created is excluded from their own code execution optimization. ([full analysis](ramblings/2026-02-20--anthropic-graduates-programmatic-tool-calling-thesis-validation.md))
+
 ### Real-World Validation: The Claude Code Marketplace
 
 This Skill+CLI pattern is not theoretical. Anthropic's own [Claude Code plugin marketplace](https://github.com/anthropics/claude-plugins-official/blob/261ce4fba4f2c314c490302158909a32e5889c88/.claude-plugin/marketplace.json#L643C1-L652C6) hosts plugins that follow this exact architecture. Firecrawl — a well-known web scraping service with an existing MCP server — [chose to build a Skill+CLI plugin](https://github.com/firecrawl/firecrawl-claude-plugin/blob/684b975c8cc6bd0fcfa96f787900bf87fffeef57/README.md) instead:
@@ -231,7 +254,11 @@ When data flows through code, not context:
 
 ## Further Reading
 
-* [Anthropic: Code Execution with MCP](archived-resources/anthropic--code-execution-with-mcp.md)
+* [Anthropic: Sonnet 4.6 Announcement](archived-resources/anthropic--sonnet-4-6-announcement.md) — Programmatic tool calling goes GA (Feb 2026)
+* [Anthropic: Programmatic Tool Calling Docs](archived-resources/anthropic-docs--programmatic-tool-calling.md) — Official API documentation
+* [Anthropic: Advanced Tool Use](archived-resources/anthropic--advanced-tool-use-engineering.md) — Tool Search, Programmatic Calling, Examples
+* [Anthropic: Code Execution with MCP](archived-resources/anthropic--code-execution-with-mcp.md) — Original 98.7% finding
+* [Thesis Validation Analysis](ramblings/2026-02-20--anthropic-graduates-programmatic-tool-calling-thesis-validation.md) — How the Feb 2026 GA validates our thesis
 * [Linearis: CLI Built for Agents](archived-resources/zottmann--linearis-linear-cli-built.md)
 * [Rise of Industrial Software](archived-resources/chrisloy--rise-of-industrial-software.md)
 * [98% of MCP Servers Got This Wrong](archived-resources/hackernoon--98-percent-mcp-servers-wrong.md)
