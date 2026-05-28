@@ -191,6 +191,7 @@ The future is not bigger context windows. It's smarter tool design.
 ### Industry Voices
 
 * **Mitko Vasilev (CTO, LinkedIn):** ["I just deleted all my MCPs. Skills + CLI is all you need."](https://www.linkedin.com/feed/update/urn:li:activity:7437591826464677888/) (Mar 2026, 140+ reactions, 450+ comments) — practitioner declaration aligned with this repo's thesis ([archived](archived-resources/mitkox-linkedin--deleted-all-mcps-skills-cli.md))
+* **Carsten Lindstedt (LinkedIn comment):** [Tool-surface entropy framing](archived-resources/carsten-lindstedt-linkedin--tool-surface-entropy.md) — "this isn't MCP vs CLI; the real variable is whether you control tool surface entropy or let it explode." Promoted to repo concept page: [`tool-surface-entropy.md`](tool-surface-entropy.md).
 * **Prompt Engineering (YouTube):** [Anthropic Just Killed Tool Calling](https://www.youtube.com/watch?v=8dVCSPXG6Mw) (Feb 2026, 42K+ views) ([transcript](archived-resources/prompt-engineering-yt--anthropic-killed-tool-calling--transcript.md))
 * **ai505.com:** [Anthropic Just Killed Traditional Tool Calling](https://ai505.com/anthropic-just-killed-traditional-tool-calling-here-s-what-replaces-it/) (Feb 2026) ([archived](archived-resources/ai505--anthropic-killed-traditional-tool-calling.md))
 * **Theo t3.gg:** [Anthropic admits they were wrong about MCP](https://www.youtube.com/watch?v=1piFEKA9XL0) (Nov 2025) ([archived](archived-resources/theo-t3gg--anthropic-admits-mcp-sucks--transcript.md))

@@ -1,0 +1,25 @@
+{
+  "url": "https://www.linkedin.com/feed/update/urn:li:activity:7437591826464677888/?dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287437614753553821698%2Curn%3Ali%3Aactivity%3A7437591826464677888%29&dashReplyUrn=urn%3Ali%3Afsd_comment%3A%287444686006341128192%2Curn%3Ali%3Aactivity%3A7437591826464677888%29",
+  "parent_post_url": "https://www.linkedin.com/feed/update/urn:li:activity:7437591826464677888/",
+  "parent_post_author": "Mitko Vasilev",
+  "title": "Tool-Surface Entropy framing (reply to Bora Celik in Mitko Vasilev's MCP thread)",
+  "author": "Carsten Lindstedt",
+  "author_headline": "Industrial AI | Industry World Models · Virtual Twins · Agentic Systems · Physical AI",
+  "platform": "LinkedIn",
+  "comment_urn": "urn:li:fsd_comment:(7437614753553821698,urn:li:activity:7437591826464677888)",
+  "reply_urn": "urn:li:fsd_comment:(7444686006341128192,urn:li:activity:7437591826464677888)",
+  "published_date": "2026-03",
+  "archived_date": "2026-05-28",
+  "archived_by": "Claude Code Agent",
+  "extraction_method": "linkedin-webctl",
+  "content_type": "social_comment_reply",
+  "topics": [
+    "tool-surface entropy",
+    "action space control",
+    "progressive disclosure limits",
+    "MCP critique",
+    "CLI for agents",
+    "context window poisoning"
+  ],
+  "notes": "Reply by Carsten Lindstedt to Bora Celik's reply in Mitko Vasilev's 'I deleted all my MCPs' thread. Carsten introduces the 'tool-surface entropy' framing: the real variable isn't MCP-vs-CLI but whether one controls action-space entropy. Steel-mans both sides: concedes Zechner's controlled-setup result while explaining why naive large MCP fails at scale. Notes progressive disclosure shifts the problem to retrieval, which is unreliable at scale."
+}

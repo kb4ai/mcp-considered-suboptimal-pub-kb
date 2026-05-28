@@ -6,6 +6,17 @@ A curated collection of industry voices questioning MCP's design decisions.
 
 ---
 
+## Tool-Surface Entropy (unifying framing)
+
+> "This isn't MCP vs CLI; the real variable is whether you control tool surface entropy or let it explode."
+> — Carsten Lindstedt, LinkedIn (Mar 2026) ([archived comment](archived-resources/carsten-lindstedt-linkedin--tool-surface-entropy.md))
+
+Promoted to a dedicated concept page: **[`tool-surface-entropy.md`](tool-surface-entropy.md)** — frames the entire repo's critique around a single variable (size and selection cost of the action space), steel-mans MCP defenders, and explains why Zechner's "CLI vs MCP makes no difference" benchmark and the "naive large MCP poisons context" observations are *both* consistent with the same underlying mechanism.
+
+Surfaced in: Mitko Vasilev's "deleted all my MCPs" thread ([archive](archived-resources/mitkox-linkedin--deleted-all-mcps-skills-cli.md)), as a reply to Bora Celik citing [Mario Zechner's MCP vs CLI benchmark](https://mariozechner.at/posts/2025-08-15-mcp-vs-cli/).
+
+---
+
 ## Authoritative Critiques
 
 ### Armin Ronacher (Creator of Flask, Rye, uv)

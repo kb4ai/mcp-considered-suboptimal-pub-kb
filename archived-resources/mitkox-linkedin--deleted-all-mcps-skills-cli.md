@@ -25,7 +25,7 @@ A practitioner-level (CTO) declaration that lines up directly with this repo's t
 The 450-comment thread is itself a useful artifact, surfacing the standard counter-arguments and rebuttals:
 
 * **Bora Celik (Founder, gentic.co):** disagrees, citing [Mario Zechner's MCP vs CLI benchmark](https://mariozechner.at/posts/2025-08-15-mcp-vs-cli/) — argues CLI-only is a sub-1% use case.
-* **Carsten Lindstedt:** nuanced reply — Zechner's controlled benchmark holds, but "large MCP servers inject dozens of tools and poison the context window… the real variable is whether you control tool surface entropy or let it explode." Aligns with this repo.
+* **Carsten Lindstedt:** nuanced reply — Zechner's controlled benchmark holds, but "large MCP servers inject dozens of tools and poison the context window… the real variable is whether you control tool surface entropy or let it explode." [Dedicated archive](./carsten-lindstedt-linkedin--tool-surface-entropy.md). Framing extracted to repo-level concept page: [`tool-surface-entropy.md`](../tool-surface-entropy.md).
 * **SMARTHAUS (pinned reply):** governance counter-argument — claims their MCP fits 139 operations in ~3,900 tokens via domain-scoped dispatch, framing MCP as "a governance engine with mathematical teeth" rather than an API wrapper. Useful steel-manned opposition.
 * **Rick Bullotta:** "MCP isn't exactly the best for handling access control — particularly when an agent is acting on behalf of a specific individual."
 * **Alex C. (Tech Lead, Epam):** disagrees, argues MCP still useful for "more deterministic usage."
