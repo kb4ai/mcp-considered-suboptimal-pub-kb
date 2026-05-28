@@ -137,6 +137,8 @@ When building or choosing CLI tools for LLM agents:
 
 See [CLI/SDK Over Context Bloat](cli-sdk-over-context-bloat.md) for detailed patterns.
 
+**See also: [AXI specification](https://axi.md/)** — a named 10-principle spec for agent-friendly CLIs (TOON output, minimal default schemas, pre-computed aggregates, definitive empty states, contextual next-step hints, ambient context). Reference implementations [`gh-axi`](https://github.com/kunchenguid/gh-axi) and [`chrome-devtools-axi`](https://github.com/kunchenguid/chrome-devtools-axi) beat MCP equivalents on cost and reliability in published benchmarks. Full synthesis: [ramblings/2026-05-17--axi-agent-experience-initiative.md](ramblings/2026-05-17--axi-agent-experience-initiative.md). Pairs with the [TOON encoding](ramblings/2026-05-17--toon-token-oriented-object-notation.md) at the wire-format layer.
+
 ---
 
 ## Contribute: Share Your CLI Tools

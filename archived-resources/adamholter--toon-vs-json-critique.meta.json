@@ -1,0 +1,38 @@
+{
+  "url": "https://adam.holter.com/toon-vs-json-for-llms-token-efficiency-retrieval-accuracy-and-where-it-actually-helps/",
+  "title": "TOON vs JSON for LLMs: Token Efficiency, Retrieval Accuracy, and Where It Actually Helps",
+  "author": "Adam Holter",
+  "publication_date": "2025-11-17",
+  "platform": "adam.holter.com",
+  "archive_date": "2026-05-17",
+  "archived_by": "Claude Code (Opus 4.7)",
+  "content_type": "critique/analysis article",
+  "fetch_notes": "Fetched cleanly via WebFetch. Critique focuses on TOON's narrow scope and structural weaknesses, framing it as 'a compression codec for prompts, not a new foundation for data engineering.'",
+  "topics": [
+    "toon",
+    "json",
+    "critique",
+    "token-efficiency",
+    "prompt-engineering",
+    "header-decay",
+    "wide-rows"
+  ],
+  "key_statistics": {
+    "token_reduction_range_flat_data": "30-60%",
+    "wide_row_independent_tests": "none observed by author"
+  },
+  "related_sources": [
+    {
+      "title": "toon-format/toon",
+      "url": "https://github.com/toon-format/toon"
+    },
+    {
+      "title": "TOON vs JSON arxiv benchmark (constrained decoding)",
+      "url": "https://arxiv.org/abs/2603.03306"
+    }
+  ],
+  "extraction_methods": [
+    "WebFetch (adam.holter.com)"
+  ],
+  "content_summary": "Balanced critique of TOON. Acknowledges 30-60% token savings on flat data and accuracy wins on retrieval, but flags wide-row 'header decay,' thin ecosystem, weak null handling, limited benchmark depth, and the model training-data gap. Concludes TOON is a prompt-layer codec, not a data-engineering substrate for JSON."
+}

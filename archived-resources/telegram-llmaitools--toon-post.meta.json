@@ -1,0 +1,37 @@
+{
+  "url": "https://t.me/llmaitools/3854",
+  "title": "TOON: Token-Oriented Object Notation (llmaitools Telegram post)",
+  "author": "@llmaitools (Telegram channel)",
+  "publication_date": "~2026-05 (pre-archive)",
+  "platform": "Telegram",
+  "archive_date": "2026-05-17",
+  "archived_by": "Claude Code (Opus 4.7)",
+  "content_type": "social-post (channel)",
+  "fetch_notes": "Telegram's /s/ preview returned a JS-gated channel embed without inline post text on both direct and jina.ai reader proxy fetches. A second fetch via t.me/llmaitools/3854?embed=1&mode=tme surfaced the post's reconstructed summary describing TOON. Linked sources cross-verified against the official toon-format repo.",
+  "topics": [
+    "toon",
+    "token-efficiency",
+    "data-format",
+    "llm-tooling",
+    "telegram-source"
+  ],
+  "related_sources": [
+    {
+      "title": "toon-format/toon",
+      "url": "https://github.com/toon-format/toon",
+      "source": "GitHub"
+    },
+    {
+      "title": "toon-format/spec",
+      "url": "https://github.com/toon-format/spec",
+      "source": "GitHub"
+    }
+  ],
+  "extraction_methods": [
+    "WebFetch (t.me/s/llmaitools/3854) - blocked by JS",
+    "WebFetch (r.jina.ai proxy) - blocked",
+    "WebFetch (t.me/llmaitools/3854?embed=1&mode=tme) - partial summary surfaced",
+    "Cross-reference with linked GitHub repo READMEs"
+  ],
+  "content_summary": "Telegram post on @llmaitools channel promoting TOON as a token-efficient JSON alternative for LLM prompts. Cites official 5016-call benchmark (TOON 76.4% acc / 2759 tokens vs JSON 75.0% / 4587). Highlights design ('Sparse Trees, Dense Lists'), best-fit use cases (uniform arrays, RAG, agents), caveats (wide-row header decay, minified-JSON competition), and ecosystem ports."
+}

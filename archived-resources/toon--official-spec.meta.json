@@ -1,0 +1,34 @@
+{
+  "url": "https://github.com/toon-format/spec",
+  "title": "TOON Official Specification (toon-format/spec)",
+  "author": "Johann Schopplich",
+  "publication_date": "2025-11-24 (v3.0 Working Draft)",
+  "platform": "GitHub",
+  "archive_date": "2026-05-17",
+  "archived_by": "Claude Code (Opus 4.7)",
+  "content_type": "specification",
+  "fetch_notes": "Fetched via WebFetch. Extracted version, status, license, syntactic principles, ABNF grammar reference, fixture count.",
+  "topics": [
+    "toon",
+    "specification",
+    "abnf-grammar",
+    "data-format",
+    "llm-serialization"
+  ],
+  "key_statistics": {
+    "spec_version": "3.0",
+    "conformance_fixtures": "358+",
+    "media_type": "text/toon (provisional)"
+  },
+  "related_sources": [
+    {
+      "title": "TOON Reference Implementation",
+      "url": "https://github.com/toon-format/toon",
+      "source": "GitHub"
+    }
+  ],
+  "extraction_methods": [
+    "WebFetch (github.com/toon-format/spec)"
+  ],
+  "content_summary": "Working Draft v3.0 of TOON specification. Defines formal ABNF grammar, lossless mapping to JSON data model, syntactic rules for tabular arrays, indentation-based nesting, implicit typing, and array length declarations. 358+ conformance test fixtures."
+}

@@ -1,0 +1,33 @@
+{
+  "url": "https://github.com/kunchenguid/chrome-devtools-axi",
+  "title": "chrome-devtools-axi: Agent-ergonomic browser automation",
+  "author": "Kun Chen (kunchenguid)",
+  "publication_date": "~2026 (pre-2026-05)",
+  "platform": "GitHub",
+  "archive_date": "2026-05-17",
+  "archived_by": "Claude Code (Opus 4.7)",
+  "content_type": "code_repository_readme",
+  "topics": [
+    "AXI",
+    "browser automation",
+    "chrome-devtools-mcp",
+    "TOON output",
+    "agent ergonomics",
+    "MCP alternatives"
+  ],
+  "content_summary": "Reference implementation of AXI principles applied to browser automation. Wraps chrome-devtools-mcp internally but exposes a CLI surface with TOON-formatted output, unified action+snapshot commands, generation-prefixed element UIDs (stale-ref detection), and next-step hints. Beats raw MCP variants on cost while matching reliability.",
+  "key_points": [
+    "MIT licensed, kunchenguid",
+    "Wraps chrome-devtools-mcp — so this is literally CLI-over-MCP as a usability fix",
+    "TOON encoding ~40% smaller than JSON",
+    "Generation-prefixed UIDs (e.g. @g1:1) prevent silent stale-ref failures",
+    "Every command output includes contextual next-step suggestions",
+    "Benchmark: 100% success @ $0.074 vs MCP 99-100% @ $0.091-0.120 per task"
+  ],
+  "related_sources": [
+    "https://axi.md/",
+    "https://github.com/kunchenguid/axi",
+    "https://github.com/kunchenguid/gh-axi",
+    "https://github.com/operasoftware/opera-browser-cli"
+  ]
+}

@@ -178,4 +178,20 @@ Each archived source should include:
 
 ---
 
-*Last updated: 2026-01-23*
+## AXI & TOON archival (2026-05-17, completed)
+
+- [x] Archive https://axi.md/ → `archived-resources/axi-md--home.*`
+- [x] Archive https://agentexperience.ax/guides/getting-started-guide/ → `archived-resources/agentexperience-ax--getting-started.*`
+- [x] Archive https://github.com/kunchenguid/gh-axi → `archived-resources/kunchenguid--gh-axi.*`
+- [x] Archive https://github.com/kunchenguid/chrome-devtools-axi → `archived-resources/kunchenguid--chrome-devtools-axi.*`
+- [x] Archive https://github.com/operasoftware/opera-browser-cli → `archived-resources/operasoftware--opera-browser-cli.*`
+- [x] Archive TOON spec + GitHub + Telegram post + Holter critique → `archived-resources/toon--*`, `telegram-llmaitools--toon-post.*`, `adamholter--toon-vs-json-critique.*`
+- [x] Synthesis: `ramblings/2026-05-17--axi-agent-experience-initiative.md`
+- [x] Synthesis: `ramblings/2026-05-17--toon-token-oriented-object-notation.md`
+- [x] README "Adjacent Developments: AXI & TOON" section + Further Reading entries
+- [x] Cross-links added to `mcp-alternatives.md` and `cli-sdk-over-context-bloat.md`
+- [x] Companion Skill-style gist (secret): https://gist.github.com/gwpl/841d6d29f5987a325551c2bbf3eec764 — linked from README; promote to public after review
+
+---
+
+*Last updated: 2026-05-17*

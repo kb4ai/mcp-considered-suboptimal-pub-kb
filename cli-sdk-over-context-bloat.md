@@ -262,3 +262,5 @@ When data flows through code, not context:
 * [Linearis: CLI Built for Agents](archived-resources/zottmann--linearis-linear-cli-built.md)
 * [Rise of Industrial Software](archived-resources/chrisloy--rise-of-industrial-software.md)
 * [98% of MCP Servers Got This Wrong](archived-resources/hackernoon--98-percent-mcp-servers-wrong.md)
+* [AXI: Concrete Spec for Agent-Friendly CLIs](ramblings/2026-05-17--axi-agent-experience-initiative.md) — 10-principle spec with benchmarks beating MCP head-to-head
+* [TOON: Token-Oriented Object Notation](ramblings/2026-05-17--toon-token-oriented-object-notation.md) — ~40% token reduction at the wire-format layer

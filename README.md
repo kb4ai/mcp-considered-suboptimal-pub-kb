@@ -146,6 +146,20 @@ Not just "any CLI" — tools built for composability and agent workflows:
 * **[MCP Critique: Sources & Commentary](mcp-critique-sources.md)** — Comprehensive collection of industry voices
 * **[Anthropic Graduates Programmatic Tool Calling](ramblings/2026-02-20--anthropic-graduates-programmatic-tool-calling-thesis-validation.md)** — Feb 2026 thesis validation analysis
 * **[Firecrawl: CLI Over MCP in Anthropic's Marketplace](ramblings/2026-02-18--firecrawl-claude-marketplace-cli-over-mcp.md)** — Case study with permalinks
+* **[AXI: A Concrete Spec for Agent-Friendly CLIs](ramblings/2026-05-17--axi-agent-experience-initiative.md)** — May 2026 — 10-principle spec + head-to-head benchmarks beating MCP
+* **[TOON: Token-Oriented Object Notation](ramblings/2026-05-17--toon-token-oriented-object-notation.md)** — May 2026 — ~40% token reduction vs JSON, payload-layer evidence
+
+---
+
+## Adjacent: AXI + TOON (May 2026)
+
+Two named specs now operationalize this thesis with published head-to-head benchmarks beating MCP:
+
+* **[AXI](https://axi.md/)** — 10-principle CLI design spec ([`gh-axi`](https://github.com/kunchenguid/gh-axi) 100% / $0.05 vs MCP 82–87% / $0.10–$0.15; [`chrome-devtools-axi`](https://github.com/kunchenguid/chrome-devtools-axi) *wraps* the MCP server in a CLI and still wins). Corporate adoption: [`opera-browser-cli`](https://github.com/operasoftware/opera-browser-cli). → [analysis](ramblings/2026-05-17--axi-agent-experience-initiative.md)
+* **[TOON](https://toonformat.dev/)** — Wire-format encoding, −39.9% tokens / +1.4pp accuracy vs JSON (5,016 LLM calls). AXI principle #1 mandates it. → [analysis](ramblings/2026-05-17--toon-token-oriented-object-notation.md)
+* **Companion skill** *(secret gist, under review)* — [Authoring Agent-Friendly CLIs](https://gist.github.com/gwpl/841d6d29f5987a325551c2bbf3eec764)
+
+Savings stack: **encoding (TOON) + interface (AXI) + invocation (Anthropic programmatic tool calling)**.
 
 ---
 
@@ -203,6 +217,6 @@ The future is not bigger context windows. It's smarter tool design.
 
 ---
 
-*Last updated 2026-02-21. All sources preserved with full attribution in `archived-resources/`.*
+*Last updated 2026-05-28. All sources preserved with full attribution in `archived-resources/`.*
 
 [jq]: https://github.com/jqlang/jq

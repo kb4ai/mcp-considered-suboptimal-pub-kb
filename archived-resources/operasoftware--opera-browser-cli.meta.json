@@ -1,0 +1,32 @@
+{
+  "url": "https://github.com/operasoftware/opera-browser-cli",
+  "title": "opera-browser-cli: AXI-compliant browser CLI",
+  "author": "Opera Software",
+  "publication_date": "~2026 (pre-2026-05)",
+  "platform": "GitHub",
+  "archive_date": "2026-05-17",
+  "archived_by": "Claude Code (Opus 4.7)",
+  "content_type": "code_repository_readme",
+  "topics": [
+    "AXI",
+    "Opera browser",
+    "browser automation",
+    "TOON encoding",
+    "agent ergonomics",
+    "corporate AXI adoption"
+  ],
+  "content_summary": "Opera Software's AXI-compliant CLI for browser automation, wrapping opera-devtools-mcp. First major corporate vendor implementation of Kun Chen's AXI framework. 40+ commands; emphasis on TOON output, combined navigate+snapshot operations, contextual hints, and AI-native features via Opera Neon.",
+  "key_points": [
+    "MIT licensed, authored by operasoftware (Opera ASA)",
+    "Explicitly described as 'AXI-compliant'",
+    "Wraps opera-devtools-mcp behind a CLI — same pattern as chrome-devtools-axi",
+    "TOON encoding ~40% smaller than JSON",
+    "40+ commands spanning interaction, emulation, DevTools, AI features",
+    "Validates AXI as a cross-organizational design standard"
+  ],
+  "related_sources": [
+    "https://axi.md/",
+    "https://github.com/kunchenguid/chrome-devtools-axi",
+    "https://github.com/kunchenguid/axi"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "url": "https://axi.md/",
+  "title": "AXI: Agent eXperience Interface",
+  "author": "Kun Chen (@kunchenguid)",
+  "publication_date": "~2026 (pre-2026-05)",
+  "platform": "axi.md (personal/project site)",
+  "archive_date": "2026-05-17",
+  "archived_by": "Claude Code (Opus 4.7)",
+  "content_type": "framework_homepage",
+  "topics": [
+    "AXI",
+    "Agent Experience Interface",
+    "agent-native CLI",
+    "TOON format",
+    "token efficiency",
+    "MCP alternatives",
+    "CLI design principles"
+  ],
+  "content_summary": "Homepage of the AXI (Agent eXperience Interface) framework by Kun Chen. AXI is a set of 10 design principles for building CLI tools optimized for AI agents. The premise: protocol choice (CLI vs MCP) matters less than principled design. Benchmarks show AXI tools outperform MCP equivalents on cost (33-66% cheaper), success rate, and turn count.",
+  "key_points": [
+    "AXI = 10 principles grouped in 4 categories: Efficiency, Robustness, Discoverability, plus help access",
+    "TOON format claims ~40% token savings over JSON",
+    "Reference implementations: gh-axi and chrome-devtools-axi",
+    "Benchmark: gh-axi 100% success @ $0.05/task vs MCP 82-87% @ $0.10-0.15",
+    "Creator: Kun Chen (individual, not consortium)",
+    "Distinguished from agentexperience.ax (Netlify-led broader AX movement)"
+  ],
+  "related_sources": [
+    "https://github.com/kunchenguid/axi",
+    "https://github.com/kunchenguid/gh-axi",
+    "https://github.com/kunchenguid/chrome-devtools-axi",
+    "https://toonformat.dev/",
+    "https://agentexperience.ax/"
+  ]
+}

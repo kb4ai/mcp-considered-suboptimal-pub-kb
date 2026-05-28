@@ -1,0 +1,53 @@
+{
+  "url": "https://github.com/toon-format/toon",
+  "title": "toon-format/toon - Token-Oriented Object Notation (TOON)",
+  "author": "Johann Schopplich",
+  "publication_date": "2025-10 (initial); v3.0 2025-11-24",
+  "platform": "GitHub",
+  "archive_date": "2026-05-17",
+  "archived_by": "Claude Code (Opus 4.7)",
+  "content_type": "repository README + spec reference",
+  "fetch_notes": "Fetched via WebFetch. README extracted including syntax, side-by-side example, official benchmark numbers, per-model accuracy table, and ecosystem links.",
+  "topics": [
+    "toon",
+    "token-oriented-object-notation",
+    "data-serialization",
+    "llm-context-efficiency",
+    "json-alternative",
+    "token-reduction",
+    "prompt-engineering",
+    "tabular-encoding"
+  ],
+  "key_statistics": {
+    "token_reduction_vs_json_average": "39.9% fewer tokens",
+    "token_reduction_vs_json_mixed_track": "-21.9%",
+    "token_delta_vs_minified_json": "+14.7% (minified JSON is denser)",
+    "token_reduction_vs_yaml": "-5.7%",
+    "token_reduction_vs_xml": "-31.0%",
+    "accuracy_toon_average": "76.4%",
+    "accuracy_json_average": "75.0%",
+    "benchmark_scope": "5016 LLM calls",
+    "headline_example_json_tokens": 4587,
+    "headline_example_toon_tokens": 2759,
+    "timeseries_dataset_token_reduction": "59.0% (9115 vs 22245)",
+    "github_repos_dataset_token_reduction": "42.3% (8744 vs 15144)",
+    "github_stars_at_archive": "~24300"
+  },
+  "related_sources": [
+    {
+      "title": "TOON Official Specification",
+      "url": "https://github.com/toon-format/spec",
+      "source": "GitHub"
+    },
+    {
+      "title": "TOON Playground",
+      "url": "https://toonformat.dev/playground",
+      "source": "toonformat.dev"
+    }
+  ],
+  "extraction_methods": [
+    "WebFetch (github.com/toon-format/toon)",
+    "WebSearch corroboration"
+  ],
+  "content_summary": "Official reference implementation for TOON, a compact JSON-compatible serialization format optimized for LLM token budgets. Combines YAML indentation with CSV-style tabular rows for uniform arrays. Claims ~40% token reduction vs JSON with comparable or better accuracy across 5016 LLM calls. Best for tabular data; minified JSON can beat TOON when structure is deeply nested."
+}

@@ -1,0 +1,30 @@
+{
+  "url": "https://agentexperience.ax/guides/getting-started-guide/",
+  "title": "Agent Experience (AX) - Getting Started Guide",
+  "author": "AX OSS contributors (Netlify-founded community)",
+  "publication_date": "unknown (~2025-2026)",
+  "platform": "agentexperience.ax",
+  "archive_date": "2026-05-17",
+  "archived_by": "Claude Code (Opus 4.7)",
+  "content_type": "guide",
+  "topics": [
+    "Agent Experience",
+    "AX methodology",
+    "Netlify",
+    "process framework",
+    "agent-friendly design"
+  ],
+  "content_summary": "Methodology guide for adopting Agent Experience principles in an organization. Three-phase approach: assessment, planning, implementation. Operated by an OSS contributor community originally convened by Netlify. Broader/parallel to but distinct from Kun Chen's AXI technical framework.",
+  "key_points": [
+    "AX = holistic experience AI agents have with a product/platform",
+    "Parallel concept to UX and DX",
+    "Netlify is the foundational convener; positioned as community-driven",
+    "Three-phase methodology: Assessment, Planning, Implementation",
+    "No concrete CLI vs MCP technical guidance on this page"
+  ],
+  "related_sources": [
+    "https://agentexperience.ax/",
+    "https://github.com/agentexperience/ax",
+    "https://axi.md/"
+  ]
+}
