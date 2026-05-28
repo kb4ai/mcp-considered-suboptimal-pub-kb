@@ -40,3 +40,9 @@ The 450-comment thread is itself a useful artifact, surfacing the standard count
 * Anthropic shift that primed this: [Sonnet 4.6 / PTC GA](./anthropic--sonnet-4-6-announcement.md), [Code Execution with MCP](./anthropic--code-execution-with-mcp.md)
 * Related practitioner voices: [Theo t3.gg](./theo-t3gg--anthropic-admits-mcp-sucks--transcript.md), [Carlo Zottmann (Linearis)](./zottmann--linearis-linear-cli-built.md)
 
+---
+
+## Provenance Note
+
+Original post text transcribed from the LinkedIn UI on 2026-05-28; thread excerpts (Bora Celik, Carsten Lindstedt, Rick Bullotta, Alex C., Heinrich Krupp) quoted from the same page view. Engagement counts captured at archive time. Full comment thread not archived in-tree — consult the source URL for the live state.
+
