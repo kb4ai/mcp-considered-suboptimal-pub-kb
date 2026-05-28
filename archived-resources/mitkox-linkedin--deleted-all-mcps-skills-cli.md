@@ -4,7 +4,7 @@
 **Author:** Mitko Vasilev (CTO) — [profile](https://www.linkedin.com/in/mitkox/)
 **Published:** ~March 2026 (LinkedIn shows "2mo" as of 2026-05-28)
 **Engagement at archive time:** 140 reactions, 450 comments, 175 reposts
-**Archived:** 2026-05-28 via `linkedin-webctl`
+**Archived:** 2026-05-28
 
 ---
 
@@ -40,8 +40,3 @@ The 450-comment thread is itself a useful artifact, surfacing the standard count
 * Anthropic shift that primed this: [Sonnet 4.6 / PTC GA](./anthropic--sonnet-4-6-announcement.md), [Code Execution with MCP](./anthropic--code-execution-with-mcp.md)
 * Related practitioner voices: [Theo t3.gg](./theo-t3gg--anthropic-admits-mcp-sucks--transcript.md), [Carlo Zottmann (Linearis)](./zottmann--linearis-linear-cli-built.md)
 
----
-
-## Extraction Note
-
-`linkedin-webctl post get-post --post-slug 7437591826464677888` returns the pinned SMARTHAUS reply text in the `text` field due to LinkedIn rendering a featured comment in the main post slot. Original post text above transcribed from the LinkedIn UI / user confirmation. Full comments not archived here; can be re-fetched with `linkedin-webctl post get-comments --comments 500 --with-replies --comment-sort most-relevant` if needed.

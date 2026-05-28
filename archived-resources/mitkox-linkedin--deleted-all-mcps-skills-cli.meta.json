@@ -9,7 +9,7 @@
   "published_date": "2026-03",
   "archived_date": "2026-05-28",
   "archived_by": "Claude Code Agent",
-  "extraction_method": "linkedin-webctl",
+  "extraction_method": "manual_transcription",
   "content_type": "social_post",
   "engagement": {
     "reactions": 140,
