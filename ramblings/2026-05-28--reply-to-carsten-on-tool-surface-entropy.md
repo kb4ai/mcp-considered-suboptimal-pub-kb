@@ -22,7 +22,7 @@
 >
 > Naive MCP makes entropy control opt-in and architecturally hard; CLI/Skills make it the default. Same axis, different gradient.
 >
-> Promoted your framing to a concept page in the repo: https://github.com/kb4ai/mcp-considered-suboptimal-pub-kb/blob/master/tool-surface-entropy.md — and archived your comment + the changes it inspired in this commit: https://github.com/kb4ai/mcp-considered-suboptimal-pub-kb/commit/__CARSTEN_COMMIT_SHA__
+> Promoted your framing to a concept page in the repo: https://github.com/kb4ai/mcp-considered-suboptimal-pub-kb/blob/master/tool-surface-entropy.md — and archived your comment + the changes it inspired in this commit: https://github.com/kb4ai/mcp-considered-suboptimal-pub-kb/commit/94cd8eb
 
 (SHA is backfilled by the agent immediately after `git push`. If you are reading this while the placeholder is still present, the commit hadn't propagated yet at archive time.)
 
